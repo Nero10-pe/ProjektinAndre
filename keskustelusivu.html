@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML LOMAKKEET </title>
+    <style>
+        body {
+            background-color: rgb(214, 214, 214);
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;;
+        }
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+       .comentarios {
+            margin: 20px;
+       }
+       .comentario {
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+       .comentario p {
+            margin: 5px 0;
+       }
+       .formulario_campo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+       }
+       .datos {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+       }
+       .comentario-texto {
+            margin: 0;
+            font-size: 16px;
+
+       }
+       .comentario-fecha, 
+       .comentario-corre {
+            margin: 0;
+       }
+       .contenido {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #fff;
+            margin-top: 10px;
+       }
+       .cuestionario select{
+            padding: 5px;
+            font-size: 14px;
+       }
+       .cuestionario {
+            margin-top: 20px;
+
+       }
+       .consentimiento {
+           margin-top: 15px;
+       }
+       .consentimiento label {
+           font-size: 14px;
+       }
+       .consentimiento input {
+           margin-right: 5px;
+       }
+    </style>
+</head>
+<body>
+    <h2>LOMAKKE</h2>
+    <form>
+        <div class="formulario_campo">
+            <input type="email" name="email" placeholder="Sinun sähköpostisi tähän.">
+            <textarea name="comentario" placeholder="Sinun komenttisi tähän."></textarea>
+            <input type="date" name="fecha_de_nacimiento">
+        </div>
+            <button type="submit">LÄHETTÄ</button>
+    </form>
+    <div class="cuestionario">
+     <label for="tipo">Valitse: </label>
+     <select id="tipo" name="tipo">
+     <option value="Pregunta">Kysymys</option>
+     <option value="comentario">Komentti</option>
+     </select>
+    </div>
+
+    <div class="consentimiento">
+        <label>
+            <input type="checkbox" name="consentimiento">
+            Hyväksyn, että he käyttävät tietojani ja henkilötietojani markkinointitarkoituksiin.
+        </label>
+    </div>
+<div class="comentarios"> 
+    <div class="comentario"> 
+        <section class="comentario">
+            <div class="datos">
+                <p class="comentario-fecha"> 03.10.2025 </p>
+                <p class="comentario-corre"> mikael.korhonen@mail.com</p>
+            </div>
+            <div class="contenido">
+                <p class="comentario-texto">Ohjelmoinnin oppiminen on ollut yksi elämäni parhaista päätöksistä. Aluksi se oli vaikeaa, mutta nyt voin luoda omia projekteja.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="comentario"> 
+        <section class="comentario">
+            <div class="datos">
+                <p class="comentario-fecha"> 25.12.2024</p>
+                <p class="comentario-corre"> jenni.lehtonen23@email.com</p>
+            </div>
+            <div class="contenido">
+                <p class="comentario-texto">HTML ja CSS olivat helppoja oppia, mutta kun ymmärsin JavaScriptin, minusta tuntui, että voisin tehdä mitä tahansa verkossa.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="comentario"> 
+        <section class="comentario">
+            <div class="datos">
+                <p class="comentario-fecha"> 17.2.2024 </p>
+                <p class="comentario-corre"> johto389@outlook.com </p>
+            </div>
+            <div class="contenido">
+                <p class="comentario-texto">En olisi koskaan uskonut, että pidän ohjelmoinnista niin paljon. Nyt haluan erikoistua verkkokehitykseen ja tietoturvaan.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="comentario"> 
+        <section class="comentario">
+            <div class="datos">
+                <p class="comentario-fecha"> 18.07.2023 </p>
+                <p class="comentario-corre"> antti.heinonen2021@gmail.com </p>
+            </div>
+            <div class="contenido">
+                <p class="comentario-texto">En ymmärrä algoritmeista mitään, se saa minut tuntemaan, että ohjelmointi ei ole minua varten.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="comentario"> 
+        <section class="comentario">
+            <div class="datos">
+                <p class="comentario-fecha"> 05.11.2023 </p>
+                <p class="comentario-corre"> riikka.salminen00@gwebmail.com </p>
+            </div>
+            <div class="contenido">
+                <p class="comentario-texto">Pidän ongelmien ratkaisemisesta koodilla. Se on kuin jättikokoisen palapelin kokoamista ja jokainen koodirivi on pala.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="comentario"> 
+        <section class="comentario">
+            <div class="datos">
+                <p class="comentario-fecha"> 02.12.2022 </p>
+                <p class="comentario-corre"> sari.ahonen@mail.com </p>
+            </div>
+            <div class="contenido">
+                <p class="comentario-texto">Olen turhautunut. Vietän tuntikausia yrittääkseni korjata virhettä, ja lopulta se puuttui puolipisteestä.</p>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
