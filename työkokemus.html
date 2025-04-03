@@ -29,31 +29,52 @@
         header h1 {
             color: #333;
         }
+        .description {
+            display: none; /* Esconder la descripción inicialmente */
+        }
     </style>
+    <script>
+        function toggleDescription(event) {
+            const description = event.currentTarget.nextElementSibling;
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block"; // Mostrar descripción
+            } else {
+                description.style.display = "none"; // Esconder descripción
+            }
+        }
+    </script>
 </head>
 <body>
     <button onclick="history.back()">🏠 Takaisin</button>
+    
     <header>
         <h1>Työkokemus</h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="CV.html">CV Andre</a></li>
+            <li><a href=".\portfolio\index.html">Portfoliosivu</a></li>
+            <li><a href=".\portfolio\keskustelusivu.html">keskustelusivu</a></li>
+        </ul>
+    </nav> 
     <main>
         <article>
-            <h2>SUBWAY - Sandwich Artist</h2>
-            <p><strong>Sijainti:</strong> Turku</p>
-            <p><strong>Aika:</strong> 2024-2025</p>
-            <p>Työtehtäviini kuului asiakaspalvelu ja myynti, sekä voileipien tekeminen ja siivouksessa auttaminen.</p>
+            <h2 onclick="toggleDescription(event)">SUBWAY - Sandwich Artist</h2>
+            <p class="description"><strong>Sijainti:</strong> Turku<br>
+            <strong>Aika:</strong> 2024-2025<br>
+            Työtehtäviini kuului asiakaspalvelu ja myynti, sekä voileipien tekeminen ja siivouksessa auttaminen.</p>
         </article>
         <article>
-            <h2>DIGIPALVELU AURA - Kokoa ja asenna</h2>
-            <p><strong>Sijainti:</strong> Turku</p>
-            <p><strong>Aika:</strong> Talvilomalla 2025</p>
-            <p>Kootin ja purin tietokoneita sekä asensin Windows XP -järjestelmän moniin tietokoneisiin varmistaen, että kaikki toimii ennen myyntiin laittamista.</p>
+            <h2 onclick="toggleDescription(event)">DIGIPALVELU AURA - Kokoa ja asenna</h2>
+            <p class="description"><strong>Sijainti:</strong> Turku<br>
+            <strong>Aika:</strong> Talvilomalla 2025<br>
+            Kootin ja purin tietokoneita sekä asensin Windows XP -järjestelmän moniin tietokoneisiin varmistaen, että kaikki toimii ennen myyntiin laittamista.</p>
         </article>
         <article>
-            <h2>LOPEZ Y LOPEZ - Keittiön apulainen</h2>
-            <p><strong>Sijainti:</strong> Helsinki</p>
-            <p><strong>Aika:</strong> 2023</p>
-            <p>Olin keittiöapulainen meksikolaisessa ravintolassa, autoin kokkaamisessa, siivoamisessa ja palvelin asiakkaita kiireisinä päivinä.</p>
+            <h2 onclick="toggleDescription(event)">LOPEZ Y LOPEZ - Keittiön apulainen</h2>
+            <p class="description"><strong>Sijainti:</strong> Helsinki<br>
+            <strong>Aika:</strong> 2023<br>
+            Olin keittiöapulainen meksikolaisessa ravintolassa, autoin kokkaamisessa, siivoamisessa ja palvelin asiakkaita kiireisinä päivinä.</p>
         </article>
     </main>
 </body>
