@@ -31,19 +31,23 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            color: #333;
+            color: #000000;
+            text-align: center;
         }
         .description {
-            display: none; /* Esconder la descripción inicialmente */
+            display: none; 
+        }
+        .links {
+            text-align: center;
         }
     </style>
     <script>
         function toggleDescription(event) {
             const description = event.currentTarget.nextElementSibling;
             if (description.style.display === "none" || description.style.display === "") {
-                description.style.display = "block"; // Mostrar descripción
+                description.style.display = "block"; 
             } else {
-                description.style.display = "none"; // Esconder descripción
+                description.style.display = "none"; 
             }
         }
     </script>
@@ -54,11 +58,11 @@
     <header>
         <h1>Työkokemus</h1>
     </header>
-    <nav>
+    <nav class="links">
         <ul>
-            <li><a href="CV.html">CV Andre</a></li>
-            <li><a href=".\portfolio\index.html">Portfoliosivu</a></li>
-            <li><a href=".\portfolio\keskustelusivu.html">keskustelusivu</a></li>
+            <li><a href="CV.html">CV ANDRE</a></li>
+            <li><a href=".\portfolio\index.html">PORTFOLIO</a></li>
+            <li><a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a></li>
         </ul>
     </nav> 
     <main>

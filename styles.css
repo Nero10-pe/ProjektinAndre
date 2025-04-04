@@ -1,56 +1,61 @@
 body {
-        background-color: antiquewhite;
+        background-color: rgb(223, 223, 223);
         border-left: 64px #000;
         border-right: 64px #000;
 }
 
 h1 {
     font-size: 60px;
-    background-color: bisque;
+    color: rgb(0, 0, 0);
 }
 h2 {
     font-size: 48px;
-    background-color: bisque;
+    color: rgb(0, 0, 0);
 }
 h3 {
     font-size: 32px;
-    background-color: bisque;
+    color: rgb(0, 0, 0);
 }
 h4 {
     font-size: 18px;
-    background-color: bisque;
+    color: rgb(0, 0, 0);
 }
 
  h5, h6 {
 
-         background-color: bisque;
+         color: rgb(0, 0, 0);
 }
 
 p {
-         background-color: aquamarine;
+         color: rgb(0, 0, 0);
 }
 
 header, nav, section, article, footer {
 
-         background-color: rgb(223, 208, 190);
+         background-color: rgb(255, 255, 255);
          border: 2px #000;
 }
 
 a { 
-        background-color: #ff5733;
+        color: #ff5733;
 }
 
 a:hover {
-        background-color: #ff7f50;
+        color: #ff7533;
+}
+
+a:visited {
+
+    color: #46486b;
 }
 
 button {
-        background-color: aqua;
-        color: rgb(0, 146, 146);
+        background-color: #00f36d;
+        color: #FFFF;
 }
 
 button:hover{
-        background-color: aqua;
+        background-color: #00f36d;
 
 }
 
