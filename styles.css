@@ -35,3 +35,22 @@ header, nav, section, article, footer {
          background-color: rgb(223, 208, 190);
          border: 2px #000;
 }
+
+a { 
+        background-color: #ff5733;
+}
+
+a:hover {
+        background-color: #ff7f50;
+}
+
+button {
+        background-color: aqua;
+        color: rgb(0, 146, 146);
+}
+
+button:hover{
+        background-color: aqua;
+
+}
+
