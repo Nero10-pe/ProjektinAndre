@@ -1,0 +1,37 @@
+body {
+        background-color: antiquewhite;
+        border-left: 64px #000;
+        border-right: 64px #000;
+}
+
+h1 {
+    font-size: 60px;
+    background-color: bisque;
+}
+h2 {
+    font-size: 48px;
+    background-color: bisque;
+}
+h3 {
+    font-size: 32px;
+    background-color: bisque;
+}
+h4 {
+    font-size: 18px;
+    background-color: bisque;
+}
+
+ h5, h6 {
+
+         background-color: bisque;
+}
+
+p {
+         background-color: aquamarine;
+}
+
+header, nav, section, article, footer {
+
+         background-color: rgb(223, 208, 190);
+         border: 2px #000;
+}
