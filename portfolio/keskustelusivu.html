@@ -7,7 +7,6 @@
     <meta name="description" content="Tässä on minun sivu">
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
-    <link rel="stylesheet" href="styles.css">
     
     <title> HTML LOMAKKEET </title>
     <style>
@@ -108,7 +107,7 @@
            margin-right: 5px;
        }
        .navbar {
-           background-color: #333;
+           background-color: #336699;
            padding: 10px;
            text-align: center;
        }
@@ -117,9 +116,6 @@
            padding: 10px;
            text-decoration: none;
           
-       }
-       .navbar a:hover {
-           background-color: #555;
        }
        .modal {
            display: none;
@@ -154,135 +150,194 @@
        h3 {
            text-align: center;
        }
+
+       header {
+            grid-area: header;
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #336699;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            grid-area: main;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer a { 
+            color: white;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <h2>LOMAKKE</h2>
-    <nav>
-        <div class="navbar">
-            <a href="../CV.html">CV ANDRE</a>
+    <div class="container">
+
+        <header>
+            <h2>LOMAKKE</h2>
+            <p>Andre Cerdan Rios</p>
+            <p>Tiev24N</p>
+        </header>
+        
+        <nav>
+            <div class="navbar">
+                <a href="../CV.html">CV ANDRE</a>
+        
+                <a href="index.html">PORTFOLIO</a>
+         
+                <a href="../työkokemus.html">TYÖKOKEMUS</a>
     
-            <a href="index.html">PORTFOLIO</a>
-     
-            <a href="../työkokemus.html">TYÖKOKEMUS</a>
+                <a href="#" onclick="openModal()">DIALOGO</a>
+            </div>
+        </nav> 
 
-            <a href="#" onclick="openModal()">DIALOGO</a>
+        <div class="overlay" id ="overlay" onclick="closeModal()"></div>
+        
+        <div class="modal" id="modal">
+            <span class="close" onclick="closeModal()">x</span>
+            <h3>LOMAKKE</h3>
+        <form>
+            <div class="formulario_campo">
+                <input type="email" name="email" placeholder="Sinun sähköpostisi tähän.">
+                <textarea name="comentario" placeholder="Sinun komenttisi tähän."></textarea>
+                <input type="date" name="fecha_de_nacimiento">
+            </div>
+                <button type="submit">LÄHETTÄ</button>
+        </form>
         </div>
-    </nav> 
-    <div class="overlay" id ="overlay" onclick="closeModal()"></div>
+
+        <main>
     
-    <div class="modal" id="modal">
-        <span class="close" onclick="closeModal()">x</span>
-        <h3>LOMAKKE</h3>
-    <form>
-        <div class="formulario_campo">
-            <input type="email" name="email" placeholder="Sinun sähköpostisi tähän.">
-            <textarea name="comentario" placeholder="Sinun komenttisi tähän."></textarea>
-            <input type="date" name="fecha_de_nacimiento">
+        <script>
+            function openModal()  {
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("overlay").style.display ="block";
+            }
+    
+            function closeModal(){  
+                document.getElementById("modal").style.display = "none";
+                document.getElementById("overlay").style.display ="none";
+            }
+    
+    
+        </script>
+        <div class="cuestionario">
+         <label for="tipo">Valitse: </label>
+         <select id="tipo" name="tipo">
+         <option value="Pregunta">Kysymys</option>
+         <option value="comentario">Komentti</option>
+         </select>
         </div>
-            <button type="submit">LÄHETTÄ</button>
-    </form>
+
+        <div class="consentimiento">
+            <label>
+                <input type="checkbox" name="consentimiento">
+                Hyväksyn, että he käyttävät tietojani ja henkilötietojani markkinointitarkoituksiin.
+            </label>
+        </div>
+    <div class="comentarios"> 
+        <div class="comentario"> 
+            <section class="comentario">
+                <div class="datos">
+                    <p class="comentario-fecha"> 03.10.2025 </p>
+                    <p class="comentario-corre"> mikael.korhonen@mail.com</p>
+                </div>
+                <div class="contenido">
+                    <p class="comentario-texto">Ohjelmoinnin oppiminen on ollut yksi elämäni parhaista päätöksistä. Aluksi se oli vaikeaa, mutta nyt voin luoda omia projekteja.</p>
+                </div>
+            </section>
+        </div>
+    
+        <div class="comentario"> 
+            <section class="comentario">
+                <div class="datos">
+                    <p class="comentario-fecha"> 25.12.2024</p>
+                    <p class="comentario-corre"> jenni.lehtonen23@email.com</p>
+                </div>
+                <div class="contenido">
+                    <p class="comentario-texto">HTML ja CSS olivat helppoja oppia, mutta kun ymmärsin JavaScriptin, minusta tuntui, että voisin tehdä mitä tahansa verkossa.</p>
+                </div>
+            </section>
+        </div>
+    
+        <div class="comentario"> 
+            <section class="comentario">
+                <div class="datos">
+                    <p class="comentario-fecha"> 17.2.2024 </p>
+                    <p class="comentario-corre"> johto389@outlook.com </p>
+                </div>
+                <div class="contenido">
+                    <p class="comentario-texto">En olisi koskaan uskonut, että pidän ohjelmoinnista niin paljon. Nyt haluan erikoistua verkkokehitykseen ja tietoturvaan.</p>
+                </div>
+            </section>
+        </div>
+    
+        <div class="comentario"> 
+            <section class="comentario">
+                <div class="datos">
+                    <p class="comentario-fecha"> 18.07.2023 </p>
+                    <p class="comentario-corre"> antti.heinonen2021@gmail.com </p>
+                </div>
+                <div class="contenido">
+                    <p class="comentario-texto">En ymmärrä algoritmeista mitään, se saa minut tuntemaan, että ohjelmointi ei ole minua varten.</p>
+                </div>
+            </section>
+        </div>
+    
+        <div class="comentario"> 
+            <section class="comentario">
+                <div class="datos">
+                    <p class="comentario-fecha"> 05.11.2023 </p>
+                    <p class="comentario-corre"> riikka.salminen00@gwebmail.com </p>
+                </div>
+                <div class="contenido">
+                    <p class="comentario-texto">Pidän ongelmien ratkaisemisesta koodilla. Se on kuin jättikokoisen palapelin kokoamista ja jokainen koodirivi on pala.</p>
+                </div>
+            </section>
+        </div>
+    
+        <div class="comentario"> 
+            <section class="comentario">
+                <div class="datos">
+                    <p class="comentario-fecha"> 02.12.2022 </p>
+                    <p class="comentario-corre"> sari.ahonen@mail.com </p>
+                </div>
+                <div class="contenido">
+                    <p class="comentario-texto">Olen turhautunut. Vietän tuntikausia yrittääkseni korjata virhettä, ja lopulta se puuttui puolipisteestä.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    </main>
     </div>
 
-    <script>
-        function openModal()  {
-            document.getElementById("modal").style.display = "block";
-            document.getElementById("overlay").style.display ="block";
-        }
+    <footer>
+        <a href="https://tai.fi/">TAI</a>
+        <a href="https://turku.inschool.fi/">WILMA</a>
+        <a href="https://edu.turku.fi/">MOODLE</a>
+    </footer>
 
-        function closeModal(){  
-            document.getElementById("modal").style.display = "none";
-            document.getElementById("overlay").style.display ="none";
-        }
-
-
-    </script>
-    <div class="cuestionario">
-     <label for="tipo">Valitse: </label>
-     <select id="tipo" name="tipo">
-     <option value="Pregunta">Kysymys</option>
-     <option value="comentario">Komentti</option>
-     </select>
-    </div>
-
-    <div class="consentimiento">
-        <label>
-            <input type="checkbox" name="consentimiento">
-            Hyväksyn, että he käyttävät tietojani ja henkilötietojani markkinointitarkoituksiin.
-        </label>
-    </div>
-<div class="comentarios"> 
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 03.10.2025 </p>
-                <p class="comentario-corre"> mikael.korhonen@mail.com</p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">Ohjelmoinnin oppiminen on ollut yksi elämäni parhaista päätöksistä. Aluksi se oli vaikeaa, mutta nyt voin luoda omia projekteja.</p>
-            </div>
-        </section>
-    </div>
-
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 25.12.2024</p>
-                <p class="comentario-corre"> jenni.lehtonen23@email.com</p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">HTML ja CSS olivat helppoja oppia, mutta kun ymmärsin JavaScriptin, minusta tuntui, että voisin tehdä mitä tahansa verkossa.</p>
-            </div>
-        </section>
-    </div>
-
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 17.2.2024 </p>
-                <p class="comentario-corre"> johto389@outlook.com </p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">En olisi koskaan uskonut, että pidän ohjelmoinnista niin paljon. Nyt haluan erikoistua verkkokehitykseen ja tietoturvaan.</p>
-            </div>
-        </section>
-    </div>
-
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 18.07.2023 </p>
-                <p class="comentario-corre"> antti.heinonen2021@gmail.com </p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">En ymmärrä algoritmeista mitään, se saa minut tuntemaan, että ohjelmointi ei ole minua varten.</p>
-            </div>
-        </section>
-    </div>
-
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 05.11.2023 </p>
-                <p class="comentario-corre"> riikka.salminen00@gwebmail.com </p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">Pidän ongelmien ratkaisemisesta koodilla. Se on kuin jättikokoisen palapelin kokoamista ja jokainen koodirivi on pala.</p>
-            </div>
-        </section>
-    </div>
-
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 02.12.2022 </p>
-                <p class="comentario-corre"> sari.ahonen@mail.com </p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">Olen turhautunut. Vietän tuntikausia yrittääkseni korjata virhettä, ja lopulta se puuttui puolipisteestä.</p>
-            </div>
-        </section>
-    </div>
-</div>
 </body>
 </html>

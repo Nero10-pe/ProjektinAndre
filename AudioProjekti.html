@@ -14,28 +14,94 @@
             text-align: center;
         }
         
+        .cotainer {
+            display: grid;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #336699;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
         
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            grid-area: main;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer a { 
+            color: white;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body style="background-color: rgb(163, 163, 163);">
-    <h1>Äänitesti</h1>
-    <nav>
-        <ul>
-            <a href="CV.html">CV ANDRE</a>
-        </ul>
-    </nav>
-    <nav>
-        <ul>
-            <a href=".\portfolio\index.html">PORTFOLIO</a>
-        </ul>
-    </nav> 
-    <nav>
-        <ul>
-            <a href="työkokemus.html">TYÖKOKEMUS</a>
-        </ul>
-    </nav> 
-    <audio controls>
-        <source src="AUDIO\audio.mp3" type="audio/mp4">
-    </audio>
+
+    <div class="container"> 
+        <header> 
+            <h1>Äänitesti</h1>
+            <p>Andre Cerdan Rios</p>
+            <p>Tiev24N</p>
+        </header>
+
+        <nav>
+            <ul>
+                <a href="CV.html">CV ANDRE</a>
+                <a href=".\portfolio\index.html">PORTFOLIO</a>
+                <a href="työkokemus.html">TYÖKOKEMUS</a>
+            </ul>
+        </nav>
+
+        <main>
+            <audio controls>
+                <source src="AUDIO\audio.mp3" type="audio/mp4">
+            </audio>
+        </main>
+        
+        <footer>
+            <a href="https://tai.fi/">TAI</a>
+            <a href="https://turku.inschool.fi/">WILMA</a>
+            <a href="https://edu.turku.fi/">MOODLE</a>
+        </footer>
+    </div>
 </html>
 </body>

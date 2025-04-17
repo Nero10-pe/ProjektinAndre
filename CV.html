@@ -7,7 +7,6 @@
 <meta name="description" content="Tässä on minun sivu">
 <meta name="keywords" content="koira, pöytä, kengät">
 <meta name="author" content="Andre Cerdan Rios">
-<link rel="stylesheet" href="styles.css">
 <title>CV Andre Cerdan</title>
  <style>
      body {
@@ -16,7 +15,7 @@
          margin: 0;
          padding: 20px
      }
-    cv-container {
+    .cv-container {
         max-width: 700px;
         margin: auto;
         background: white;
@@ -25,7 +24,7 @@
         border-radius: 10px;
     }
     h1 {
-        color: #444;
+        color: rgb(255, 255, 255);
         text-align: center;
     }
     h2 {
@@ -41,59 +40,108 @@
        text-align: center;
     }
     p {
-        margin: 5px 0;
+        margin: 10px 0;
     }
-    .link {
-       color: #007bff;
-       text-decoration: none;
-       font-weight: bold;
-    }
-    .link:hover {
-        text-decoration: underline;
-    }
+     
+    .cotainer {
+            display: grid;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "footer";
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
+        header {
+            grid-area: header;
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #336699;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            grid-area: main;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer a { 
+            color: white;
+            text-decoration: underline;
+        }
  </style>
  '
 </head>
 <body>
-    <button onclick="history.back()"> 🏠 Takaisin</button>
-    <div class="cv-container">  
+    <div class="container">
+       
+        <div class="cv-container">
+            <header>
+                <h1>CV ANDRE CERDAN RIOS</h1>
+                <p>Andre Cerdan Rios</p>
+                <p>Tiev24N</p>
+            </header>
 
-<h1>CV ANDRE CERDAN RIOS</h1>
-<nav class="links">
-    <ul>
-        <a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a>
-    </ul>
-</nav>
-<nav>
-    <ul>
-        <a href=".\portfolio\index.html">PORTFOLIO</a>
-    </ul>
-</nav> 
-<nav>
-    <ul>
-        <a href="työkokemus.html">TYÖKOKEMUS</a>
-    </ul>
-</nav> 
-<p class="subtitule">Pidän ohjelmoinnista ja urheilusta.</p>
+            <nav>
+                <a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a>
+            
+                <a href=".\portfolio\index.html">PORTFOLIO</a>
+            
+                <a href="työkokemus.html">TYÖKOKEMUS</a>
+        
+            </nav> 
 
-<h2>HENKILÖTIEDOT</h2>
-<p>Kansalaisuus: Perulainen</p>
-<p>Puhelin numero: 044238989</p>
-<p>Sähköposti: andrecr23@gmail.com</p>
-
-<h2>KOULUTUS</h2>
-<p>Lukio (Lima,Peru) 2011-2022</p>
-<p>Linasmäen Opisto (Turku) 2023-2024</p>
-<p>TAI (Turku) 2024 - </p>
-
-<h2>KIELET</h2>
-<p>Espanjaa - äidinkieli</p>
-<p>Suomea - Hyvä </p>
-<p>Englantia - Hyvä</p>
-
-<h2><a href="työkokemus.html" class="link"> TYÖKOKEMUS </a></h2>
-
-</div>
+            <p class="subtitule">Pidän ohjelmoinnista ja urheilusta.</p>
+            <main>
+                <h2>HENKILÖTIEDOT</h2>
+                    <p>Kansalaisuus: Perulainen</p>
+                    <p>Puhelin numero: 044238989</p>
+                    <p>Sähköposti: andrecr23@gmail.com</p>
+        
+                <h2>KOULUTUS</h2>
+                    <p>Lukio (Lima,Peru) 2011-2022</p>
+                    <p>Linasmäen Opisto (Turku) 2023-2024</p>
+                    <p>TAI (Turku) 2024 - </p>
+        
+                <h2>KIELET</h2>
+                    <p>Espanjaa - äidinkieli</p>
+                    <p>Suomea - Hyvä </p>
+                    <p>Englantia - Hyvä</p>
+        
+                <h2><a href="työkokemus.html" class="link"> TYÖKOKEMUS </a></h2>
+            </main>
+        </div>
+            <footer>
+                <a href="https://tai.fi/">TAI</a>
+                <a href="https://turku.inschool.fi/">WILMA</a>
+                <a href="https://edu.turku.fi/">MOODLE</a>
+            </footer>
+    </div>
 </body>
 </html>
