@@ -6,41 +6,8 @@
     <meta name="description" content="Tässä on minun sivu">
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pruebas.css">
     <title>Työkokemus</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-        article {
-            background-color: #fff;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            color: #000000;
-            text-align: center;
-        }
-        .description {
-            display: none; 
-        }
-        .links {
-            text-align: center;
-        }
-    </style>
     <script>
         function toggleDescription(event) {
             const description = event.currentTarget.nextElementSibling;
@@ -54,36 +21,46 @@
 </head>
 <body>
     <button onclick="history.back()">🏠 Takaisin</button>
-    
-    <header>
-        <h1>Työkokemus</h1>
-    </header>
-    <nav class="links">
-        <ul>
-            <li><a href="CV.html">CV ANDRE</a></li>
-            <li><a href=".\portfolio\index.html">PORTFOLIO</a></li>
-            <li><a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a></li>
-        </ul>
-    </nav> 
-    <main>
-        <article>
-            <h2 onclick="toggleDescription(event)">SUBWAY - Sandwich Artist</h2>
-            <p class="description"><strong>Sijainti:</strong> Turku<br>
-            <strong>Aika:</strong> 2024-2025<br>
-            Työtehtäviini kuului asiakaspalvelu ja myynti, sekä voileipien tekeminen ja siivouksessa auttaminen.</p>
-        </article>
-        <article>
-            <h2 onclick="toggleDescription(event)">DIGIPALVELU AURA - Kokoa ja asenna</h2>
-            <p class="description"><strong>Sijainti:</strong> Turku<br>
-            <strong>Aika:</strong> Talvilomalla 2025<br>
-            Kootin ja purin tietokoneita sekä asensin Windows XP -järjestelmän moniin tietokoneisiin varmistaen, että kaikki toimii ennen myyntiin laittamista.</p>
-        </article>
-        <article>
-            <h2 onclick="toggleDescription(event)">LOPEZ Y LOPEZ - Keittiön apulainen</h2>
-            <p class="description"><strong>Sijainti:</strong> Helsinki<br>
-            <strong>Aika:</strong> 2023<br>
-            Olin keittiöapulainen meksikolaisessa ravintolassa, autoin kokkaamisessa, siivoamisessa ja palvelin asiakkaita kiireisinä päivinä.</p>
-        </article>
-    </main>
+
+    <div class="container">
+            <h1>Työkokemus</h1>
+
+        <nav class="navigatio">
+            <ul class="nav-links">
+                <li><a href="CV.html">CV ANDRE</a></li>
+                <li><a href=".\portfolio\index.html">PORTFOLIO</a></li>
+                <li><a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <article>
+                <h2 onclick="toggleDescription(event)">SUBWAY - Sandwich Artist</h2>
+                <p class="description"><strong>Sijainti:</strong> Turku<br>
+                <strong>Aika:</strong> 2024-2025<br>
+                Työtehtäviini kuului asiakaspalvelu ja myynti, sekä voileipien tekeminen ja siivouksessa auttaminen.</p>
+            </article>
+            <article>
+                <h2 onclick="toggleDescription(event)">DIGIPALVELU AURA - Kokoa ja asenna</h2>
+                <p class="description"><strong>Sijainti:</strong> Turku<br>
+                <strong>Aika:</strong> Talvilomalla 2025<br>
+                Kootin ja purin tietokoneita sekä asensin Windows XP -järjestelmän moniin tietokoneisiin varmistaen, että kaikki toimii ennen myyntiin laittamista.</p>
+            </article>
+            <article>
+                <h2 onclick="toggleDescription(event)">LOPEZ Y LOPEZ - Keittiön apulainen</h2>
+                <p class="description"><strong>Sijainti:</strong> Helsinki<br>
+                <strong>Aika:</strong> 2023<br>
+                Olin keittiöapulainen meksikolaisessa ravintolassa, autoin kokkaamisessa, siivoamisessa ja palvelin asiakkaita kiireisinä päivinä.</p>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <ul class="footer-links">
+                <li><a href="https://tai.fi/">TAI</a></li>
+                <li><a href="https://turku.inschool.fi/">Wilma</a></li>
+                <li><a href="https://edu.turku.fi/">Moodle</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>

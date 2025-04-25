@@ -1,99 +1,63 @@
 <!DOCTYPE html>
-<html lang_="fi">
-
+<html lang="fi">
 <head> 
-<meta charset ="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Tässä on minun sivu">
-<meta name="keywords" content="koira, pöytä, kengät">
-<meta name="author" content="Andre Cerdan Rios">
-<link rel="stylesheet" href="styles.css">
-<title>CV Andre Cerdan</title>
- <style>
-     body {
-         font-family: Arial, sans-serif;
-         background-color: #f4f4f4;
-         margin: 0;
-         padding: 20px
-     }
-    cv-container {
-        max-width: 700px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
-    h1 {
-        color: #444;
-        text-align: center;
-    }
-    h2 {
-       color: #444;
-       border-bottom: 2px solid #333;
-       padding-bottom: 5px;
-    }
-    .subtitule{
-       font-size: 18px;
-       color: #666;
-       margin-top: 0;
-       margin-bottom: 20px;
-       text-align: center;
-    }
-    p {
-        margin: 5px 0;
-    }
-    .link {
-       color: #007bff;
-       text-decoration: none;
-       font-weight: bold;
-    }
-    .link:hover {
-        text-decoration: underline;
-    }
-
- </style>
- '
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tässä on minun sivu">
+    <meta name="keywords" content="koira, pöytä, kengät">
+    <meta name="author" content="Andre Cerdan Rios">
+    <link rel="stylesheet" href="pruebas.css">
+    <title>CV Andre Cerdan</title>
+    <style>
+        .footer {
+            margin-top: 145px;
+        }
+    </style>
 </head>
 <body>
     <button onclick="history.back()"> 🏠 Takaisin</button>
+
     <div class="cv-container">  
+        <header class="header">
+            <h1>CV ANDRE CERDAN RIOS</h1>
+        </header>
 
-<h1>CV ANDRE CERDAN RIOS</h1>
-<nav class="links">
-    <ul>
-        <a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a>
-    </ul>
-</nav>
-<nav>
-    <ul>
-        <a href=".\portfolio\index.html">PORTFOLIO</a>
-    </ul>
-</nav> 
-<nav>
-    <ul>
-        <a href="työkokemus.html">TYÖKOKEMUS</a>
-    </ul>
-</nav> 
-<p class="subtitule">Pidän ohjelmoinnista ja urheilusta.</p>
+        <nav class="navigatio">
+            <ul class="nav-links">
+                <li><a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a></li>
+                <li><a href=".\portfolio\index.html">PORTFOLIO</a></li>
+                <li><a href="työkokemus.html">TYÖKOKEMUS</a></li>
+            </ul>
+        </nav>
 
-<h2>HENKILÖTIEDOT</h2>
-<p>Kansalaisuus: Perulainen</p>
-<p>Puhelin numero: 044238989</p>
-<p>Sähköposti: andrecr23@gmail.com</p>
+        <main class="content">
+            <p class="subtitule">Pidän ohjelmoinnista ja urheilusta.</p>
 
-<h2>KOULUTUS</h2>
-<p>Lukio (Lima,Peru) 2011-2022</p>
-<p>Linasmäen Opisto (Turku) 2023-2024</p>
-<p>TAI (Turku) 2024 - </p>
+            <h2>HENKILÖTIEDOT</h2>
+            <p>Kansalaisuus: Perulainen</p>
+            <p>Puhelin numero: 044238989</p>
+            <p>Sähköposti: andrecr23@gmail.com</p>
 
-<h2>KIELET</h2>
-<p>Espanjaa - äidinkieli</p>
-<p>Suomea - Hyvä </p>
-<p>Englantia - Hyvä</p>
+            <h2>KOULUTUS</h2>
+            <p>Lukio (Lima, Peru) 2011-2022</p>
+            <p>Linasmäen Opisto (Turku) 2023-2024</p>
+            <p>TAI (Turku) 2024 - </p>
 
-<h2><a href="työkokemus.html" class="link"> TYÖKOKEMUS </a></h2>
+            <h2>KIELET</h2>
+            <p>Espanjaa - äidinkieli</p>
+            <p>Suomea - Hyvä</p>
+            <p>Englantia - Hyvä</p>
 
-</div>
+            <h2><a href="työkokemus.html" class="link"> TYÖKOKEMUS </a></h2>
+        </main>
+
+        <footer class="footer">
+            <ul class="footer-links">
+                <li><a href="https://tai.fi/">TAI</a></li>
+                <li><a href="https://turku.inschool.fi/">Wilma</a></li>
+                <li><a href="https://edu.turku.fi/">Moodle</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>
