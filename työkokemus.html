@@ -7,6 +7,7 @@
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
     <link rel="stylesheet" href="styles.css">
+
     <title>Työkokemus</title>
     <script>
         function toggleDescription(event) {
@@ -76,37 +77,49 @@
     </style>
 </head>
 <body>
-    <button onclick="history.back()">🏠 Takaisin</button>
-    
-    <header>
-        <h1>Työkokemus</h1>
-    </header>
-    <nav class="links">
-        <ul>
-            <li><a href="CV.html">CV ANDRE</a></li>
-            <li><a href=".\portfolio\index.html">PORTFOLIO</a></li>
-            <li><a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a></li>
-        </ul>
-    </nav> 
-    <main>
-        <article>
-            <h2 onclick="toggleDescription(event)">SUBWAY - Sandwich Artist</h2>
-            <p class="description"><strong>Sijainti:</strong> Turku<br>
-            <strong>Aika:</strong> 2024-2025<br>
-            Työtehtäviini kuului asiakaspalvelu ja myynti, sekä voileipien tekeminen ja siivouksessa auttaminen.</p>
-        </article>
-        <article>
-            <h2 onclick="toggleDescription(event)">DIGIPALVELU AURA - Kokoa ja asenna</h2>
-            <p class="description"><strong>Sijainti:</strong> Turku<br>
-            <strong>Aika:</strong> Talvilomalla 2025<br>
-            Kootin ja purin tietokoneita sekä asensin Windows XP -järjestelmän moniin tietokoneisiin varmistaen, että kaikki toimii ennen myyntiin laittamista.</p>
-        </article>
-        <article>
-            <h2 onclick="toggleDescription(event)">LOPEZ Y LOPEZ - Keittiön apulainen</h2>
-            <p class="description"><strong>Sijainti:</strong> Helsinki<br>
-            <strong>Aika:</strong> 2023<br>
-            Olin keittiöapulainen meksikolaisessa ravintolassa, autoin kokkaamisessa, siivoamisessa ja palvelin asiakkaita kiireisinä päivinä.</p>
-        </article>
-    </main>
+    <div class="container">
+
+        <header>
+            <h1>Työkokemus</h1>
+            <p>Andre Cerdan Rios</p>
+            <p>Tiev24N</p>
+        </header>
+
+        <nav>
+            <ul>
+                <a href="CV.html">CV ANDRE</a>
+                <a href=".\portfolio\index.html">PORTFOLIO</a>
+                <a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a>
+            </ul>
+        </nav> 
+
+        <main>
+            <article>
+                <h2 onclick="toggleDescription(event)">SUBWAY - Sandwich Artist</h2>
+                <p class="description"><strong>Sijainti:</strong> Turku<br>
+                <strong>Aika:</strong> 2024-2025<br>
+                Työtehtäviini kuului asiakaspalvelu ja myynti, sekä voileipien tekeminen ja siivouksessa auttaminen.</p>
+            </article>
+            <article>
+                <h2 onclick="toggleDescription(event)">DIGIPALVELU AURA - Kokoa ja asenna</h2>
+                <p class="description"><strong>Sijainti:</strong> Turku<br>
+                <strong>Aika:</strong> Talvilomalla 2025<br>
+                Kootin ja purin tietokoneita sekä asensin Windows XP -järjestelmän moniin tietokoneisiin varmistaen, että kaikki toimii ennen myyntiin laittamista.</p>
+            </article>
+            <article>
+                <h2 onclick="toggleDescription(event)">LOPEZ Y LOPEZ - Keittiön apulainen</h2>
+                <p class="description"><strong>Sijainti:</strong> Helsinki<br>
+                <strong>Aika:</strong> 2023<br>
+                Olin keittiöapulainen meksikolaisessa ravintolassa, autoin kokkaamisessa, siivoamisessa ja palvelin asiakkaita kiireisinä päivinä.</p>
+            </article>
+        </main>¨
+
+        <footer>
+            <a href="https://tai.fi/">TAI</a>
+            <a href="https://turku.inschool.fi/">WILMA</a>
+            <a href="https://edu.turku.fi/">MOODLE</a>
+        </footer>
+
+    </div>
 </body>
 </html>
