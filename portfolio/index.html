@@ -3,47 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tässä on minun sivu">
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
     <link rel="stylesheet" href="styles.css">
-    
+
     <title>Portfoliosivu</title>
+    <style>
+        body {
+            margin: 0;
+    
+        }
+        .container {
+            height: 1000px;
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "nav"
+                "content"
+                "footer";
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+        }
+        
+        header {
+            grid-area: header;
+            background-color: #003366;
+            color: white;
+            padding: 1em 0 1em 3em;
+
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #336699;
+            padding: 1em 0 1em 3em;
+            gap: 3em;
+            display: flex;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .content-wrapper {
+            grid-area: content;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        aside {
+            width: 250px; 
+            background-color: #dde6f2;
+            padding: 2em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        aside ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        aside li {
+            margin-bottom: 10px;
+        }
+
+        aside a {
+            text-decoration: none;
+            color: #003366;
+            padding-left: 3em;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 30px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding-left: 3em;
+            padding-top: 5em;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #003366;
+            color: white;
+            justify-content: center;
+            padding: 3em 0;
+            gap: 2em;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        footer a { 
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-   <div class="titulo">
-      <h1>Andre Portfolio</h1>
-   </div>
+<div class="container">
+    <header>
+        <h1>Andre Portfolio</h1>
+        <p>Andre Cerdan Rios</p>
+        <p>Tiev24N</p>
+   </header>
+      
     <nav>
-        <ul>
-            <li><a href="../CV.html">CV ANDRE</a></li>
-        </ul>
+            <a href="../CV.html">CV ANDRE</a>
+            <a href="../työkokemus.html">TYÖKOKEMUS</a>
     </nav> 
-    <nav>
-        <ul>
-            <li><a href="../työkokemus.html">TYÖKOKEMUS</a></li>
-        </ul>
-    </nav> 
-    <ul>
-        <li>PORTFOLIO</li>
-    </ul>
-    
-<h2>Portfoliosivu</h2>
-<p>Sisältää web-ohjelmointitehtäviä.</p>
-    <nav>
-        <ul>
-            <li><a href="keskustelusivu.html">KESKUSTELUSIVU</a></li>
-        </ul>
-   
-        <ul>
-            <li><a href="../AudioProjekti.html">AUDIO_MEDIA</a></li>
-        </ul>
 
-        <ul>
-            <li><a href="flex.html">FLEX_SIVU</a></li>
-        </ul>
-    </nav>
+    <div class="content-wrapper">
+        <aside>
+                <a href="keskustelusivu.html">KESKUSTELUSIVU</a>
+                <a href="../AudioProjekti.html">AUDIO_MEDIA</a>
+                <a href="flex.html">FLEX_SIVU</a>
+        </aside>
 
+        <main>
+            <h2>Portfoliosivu</h2>  
+            <p>Sisältää web-ohjelmointitehtäviä.</p>
+        </main>
+    </div>
+
+    <footer>
+        <a href="https://tai.fi/">TAI</a>
+        <a href="https://turku.inschool.fi/">WILMA</a>
+        <a href="https://edu.turku.fi/">MOODLE</a>
+    </footer>
+</div>
 </body>
 </html>
