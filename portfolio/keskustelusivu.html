@@ -18,6 +18,7 @@
         }
 
         .container {
+            height: 1000px;
             display: grid;
             grid-template-areas: 
                 "header"
@@ -45,11 +46,33 @@
             gap: 3em;
         }
 
-        .links a {
+        nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
         }
+
+        .comentario {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            margin-bottom: 15px; 
+        }
+
+        .datos {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: bold; 
+        }
+
+        .comentario-fecha,
+        .comentario-corre {
+            margin: 0;
+            color: #333; 
+        }
+
 
         .content-wrapper {
             grid-area: content;
@@ -93,6 +116,8 @@
             display: flex;
             justify-content: center;
             gap: 2em;
+            display: flex;
+            flex-direction: row;
         }
 
         footer a { 
@@ -113,7 +138,7 @@
             width: 300px;
             background: white;
             padding: 20px;
-            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
         }
 
         .overlay {
@@ -121,7 +146,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(0,0,0,0.5);
         }
 
         .close {
@@ -129,31 +154,6 @@
             text-align: right;
             cursor: pointer;
             font-size: 18px;
-        }
-
-        .comentario {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 15px;
-            background-color: #f9f9f9; 
-            margin-bottom: 15px; 
-        }
-
-        .datos {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-weight: bold; 
-        }
-
-        .comentario-fecha,
-        .comentario-corre {
-            margin: 0;
-            color: #333; 
-        } 
-
-        .consentimiento {
-            padding: 20px;
         }
     </style>
 </head>
@@ -164,14 +164,12 @@
         <p>Andre Cerdan Rios</p>
         <p>Tiev24N</p>
     </header>
-    <nav>
-        <div class="links">
+        <nav>
             <a href="../CV.html">CV ANDRE</a>
             <a href="index.html">PORTFOLIO</a>
-            
+            <a href="../työkokemus.html">TYÖKOKEMUS</a>
             <a href="#" onclick="openModal()">DIALOGO</a>
-        </div>
-    </nav>
+        </nav>
     
     <div class="overlay" id="overlay" onclick="closeModal()"></div>
     
@@ -185,6 +183,7 @@
                 <input type="date" name="fecha_de_nacimiento">
             </div>
             <button type="submit">LÄHETTÄ</button>
+
             <div class="cuestionario">
                 <label for="tipo">Valitse:</label>
                 <select id="tipo" name="tipo">
@@ -199,6 +198,7 @@
                     Hyväksyn, että he käyttävät tietojani ja henkilötietojani markkinointitarkoituksiin.
                 </label>
             </div>
+
         </form>
     </div>
 
@@ -216,85 +216,85 @@
 
     <div class="content-wrapper">
         <aside>
-                <a href="keskustelusivu.html">KESKUSTELUSIVU</a>
-                <a href="../AudioProjekti.html">AUDIO_MEDIA</a>
-                <a href="flex.html">FLEX_SIVU</a>
-                <a href="../työkokemus.html">TYÖKOKEMUS</a>
-            
+            <a href="../AudioProjekti.html">AUDIO_MEDIA</a>
+            <a href="flex.html">FLEX_SIVU</a>
+            <a href="Muuttujia.html">MUUTTUJIA</a>
         </aside>
 
         <main>
-            <div class="comentario"> 
-                <section class="comentario">
-                    <div class="datos">
-                        <p class="comentario-fecha">03.10.2025</p>
-                        <p class="comentario-corre">mikael.korhonen@mail.com</p>
-                    </div>
-                    <div class="contenido">
-                        <p class="comentario-texto">Ohjelmoinnin oppiminen on ollut yksi elämäni parhaista päätöksistä...</p>
-                    </div>
-                </section>
-            </div>
             
+            <div class="navigatio"> 
+                <div class="comentario"> 
+                    <section class="comentario">
+                        <div class="datos">
+                            <p class="comentario-fecha">03.10.2025</p>
+                            <p class="comentario-corre">mikael.korhonen@mail.com</p>
+                        </div>
+                        <div class="contenido">
+                            <p class="comentario-texto">Ohjelmoinnin oppiminen on ollut yksi elämäni parhaista päätöksistä...</p>
+                        </div>
+                    </section>
+                </div>
 
-            <div class="comentario"> 
-                <section class="comentario">
-                    <div class="datos">
-                        <p class="comentario-fecha"> 25.12.2024</p>
-                        <p class="comentario-corre"> jenni.lehtonen23@email.com</p>
-                    </div>
-                    <div class="contenido">
-                        <p class="comentario-texto">HTML ja CSS olivat helppoja oppia, mutta kun ymmärsin JavaScriptin, minusta tuntui, että voisin tehdä mitä tahansa verkossa.</p>
-                    </div>
-                </section>
-            </div>
-        
-            <div class="comentario"> 
-                <section class="comentario">
-                    <div class="datos">
-                        <p class="comentario-fecha"> 17.2.2024 </p>
-                        <p class="comentario-corre"> johto389@outlook.com </p>
-                    </div>
-                    <div class="contenido">
-                        <p class="comentario-texto">En olisi koskaan uskonut, että pidän ohjelmoinnista niin paljon. Nyt haluan erikoistua verkkokehitykseen ja tietoturvaan.</p>
-                    </div>
-                </section>
-            </div>
-        
-            <div class="comentario"> 
-                <section class="comentario">
-                    <div class="datos">
-                        <p class="comentario-fecha"> 18.07.2023 </p>
-                        <p class="comentario-corre"> antti.heinonen2021@gmail.com </p>
-                    </div>
-                    <div class="contenido">
-                        <p class="comentario-texto">En ymmärrä algoritmeista mitään, se saa minut tuntemaan, että ohjelmointi ei ole minua varten.</p>
-                    </div>
-                </section>
-            </div>
-        
-            <div class="comentario"> 
-                <section class="comentario">
-                    <div class="datos">
-                        <p class="comentario-fecha"> 05.11.2023 </p>
-                        <p class="comentario-corre"> riikka.salminen00@gwebmail.com </p>
-                    </div>
-                    <div class="contenido">
-                        <p class="comentario-texto">Pidän ongelmien ratkaisemisesta koodilla. Se on kuin jättikokoisen palapelin kokoamista ja jokainen koodirivi on pala.</p>
-                    </div>
-                </section>
-            </div>
-        
-            <div class="comentario"> 
-                <section class="comentario">
-                    <div class="datos">
-                        <p class="comentario-fecha"> 02.12.2022 </p>
-                        <p class="comentario-corre"> sari.ahonen@mail.com </p>
-                    </div>
-                    <div class="contenido">
-                        <p class="comentario-texto">Olen turhautunut. Vietän tuntikausia yrittääkseni korjata virhettä, ja lopulta se puuttui puolipisteestä.</p>
-                    </div>
-                </section>
+                <div class="comentario">
+                    <section class="comentario">
+                        <div class="datos">
+                            <p class="comentario-fecha"> 25.12.2024</p>
+                            <p class="comentario-corre"> jenni.lehtonen23@email.com</p>
+                        </div>
+                        <div class="contenido">
+                            <p class="comentario-texto">HTML ja CSS olivat helppoja oppia, mutta kun ymmärsin JavaScriptin, minusta tuntui, että voisin tehdä mitä tahansa verkossa.</p>
+                        </div>
+                    </section>
+                </div>
+ 
+                <div class="comentario"> 
+                    <section class="comentario">
+                        <div class="datos">
+                            <p class="comentario-fecha"> 17.2.2024 </p>
+                            <p class="comentario-corre"> johto389@outlook.com </p>
+                        </div>
+                        <div class="contenido">
+                            <p class="comentario-texto">En olisi koskaan uskonut, että pidän ohjelmoinnista niin paljon. Nyt haluan erikoistua verkkokehitykseen ja tietoturvaan.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="comentario"> 
+                    <section class="comentario">
+                        <div class="datos">
+                            <p class="comentario-fecha"> 18.07.2023 </p>
+                            <p class="comentario-corre"> antti.heinonen2021@gmail.com </p>
+                        </div>
+                        <div class="contenido">
+                            <p class="comentario-texto">En ymmärrä algoritmeista mitään, se saa minut tuntemaan, että ohjelmointi ei ole minua varten.</p>
+                        </div>
+                    </section>
+                </div>
+            
+                <div class="comentario"> 
+                    <section class="comentario">
+                        <div class="datos">
+                            <p class="comentario-fecha"> 05.11.2023 </p>
+                            <p class="comentario-corre"> riikka.salminen00@gwebmail.com </p>
+                        </div>
+                        <div class="contenido">
+                            <p class="comentario-texto">Pidän ongelmien ratkaisemisesta koodilla. Se on kuin jättikokoisen palapelin kokoamista ja jokainen koodirivi on pala.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="comentario"> 
+                    <section class="comentario">
+                        <div class="datos">
+                            <p class="comentario-fecha"> 02.12.2022 </p>
+                            <p class="comentario-corre"> sari.ahonen@mail.com </p>
+                        </div>
+                        <div class="contenido">
+                            <p class="comentario-texto">Olen turhautunut. Vietän tuntikausia yrittääkseni korjata virhettä, ja lopulta se puuttui puolipisteestä.</p>
+                        </div>
+                    </section>
+                 </div>
             </div>
         </main>
     </div>

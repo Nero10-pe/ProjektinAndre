@@ -39,7 +39,6 @@
             background-color: #336699;
             padding: 10px;
             text-decoration: none;
-            font-weight: bold;
             text-align: center;
         }
     
@@ -84,19 +83,28 @@
             <ul>
                 <a href="../CV.html">CV ANDRE</a>
                 <a href="index.html">PORTFOLIO</a>
-                <a href="../työkokemus.html">KESKUSTELUSIVU</a>
+                <a href="../työkokemus.html">TYÖKOKEMUS</a>
                 <a href="keskustelusivu.html">KESKUSTELUSIVU</a>
             </ul>
         </nav> 
 
        
         <section>
-                <button onclick="summa()">Summa</button>
-                <button onclick="vahennys()">Vähennys</button>
-                <button onclick="kerto()">Kerto</button>
-                <button onclick="jako()">Jako</button>
-        </section>
+            <button onclick="summa()">Summa</button>
+            <button onclick="vahennys()">Vähennys</button>
+            <button onclick="kerto()">Kerto</button>
+            <button onclick="jako()">Jako</button>
         
+            <h2>Laskin</h2>
+            <input type="number" id="numero1" placeholder="Ekä numero">
+            <input type="number" id="numero2" placeholder="Toinen numero ">
+            <div>
+                <button onclick="laskin_summa()">+</button>
+                <button onclick="laskin_vahennys()">-</button>
+                <button onclick="laskin_kerto()">×</button>
+                <button onclick="laskin_jako()">÷</button>
+            </div>
+        </section>
 
         <footer>
             <a href="https://tai.fi/">TAI</a>
