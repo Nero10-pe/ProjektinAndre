@@ -1,65 +1,51 @@
 <!DOCTYPE html>
-<html lang_="fi">
+<html lang="fi">
 
 <head> 
-<meta charset ="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Tässä on minun sivu">
-<meta name="keywords" content="koira, pöytä, kengät">
-<meta name="author" content="Andre Cerdan Rios">
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tässä on minun sivu">
+    <meta name="keywords" content="koira, pöytä, kengät">
+    <meta name="author" content="Andre Cerdan Rios">
+    <link rel="stylesheet" href="styles.css">
 
-<title>CV Andre Cerdan</title>
+    <title>CV Andre Cerdan</title>
 
-<script src="CV.js" defer></script>
- <style>
-     body {
-         background-color: #f4f4f4;
-         margin: 0;
-         padding: 20px
-     }
-    .cv-container {
-        max-width: 700px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
-    h1 {
-        color: rgb(255, 255, 255);
-        text-align: center;
-    }
-    h2 {
-       color: #444;
-       border-bottom: 2px solid #333;
-       padding-bottom: 5px;
-    }
-    .subtitule{
-       font-size: 18px;
-       color: #666;
-       margin-top: 0;
-       margin-bottom: 20px;
-       text-align: center;
-    }
-    p {
-        margin: 10px 0;
-    }
-     
-    .cotainer {
-            display: grid;
-            grid-template-areas: 
-            "header"
-            "nav"
-            "main"
-            "footer";
-            grid-template-rows: auto auto 1fr auto;
+    <script src="CV.js" defer></script>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
-
+        }
+        
+        
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        
+        .subtitule {
+            font-size: 18px;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        p {
+            margin: 10px 0;
         }
 
         header {
-            grid-area: header;
             background-color: #003366;
             color: white;
             padding: 20px;
@@ -69,82 +55,82 @@
         nav {
             grid-area: nav;
             background-color: #336699;
-            padding: 10px;
+            padding: 1em 0 1em 3em;
             text-decoration: none;
-            font-weight: bold;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 3em;
         }
         
         nav a {
             color: white;
             text-decoration: none;
+            margin: 0 15px;
         }
 
         main {
-            grid-area: main;
             padding: 20px;
             background-color: #f2f2f2;
+            flex-grow: 1; 
         }
 
         footer {
             grid-area: footer;
             background-color: #003366;
             color: white;
-            text-align: center;
-            padding: 15px;
+            justify-content: center;
+            padding: 3em 0;
+            gap: 2em;
+            display: flex;
+            flex-direction: row;
         }
 
         footer a { 
             color: white;
             text-decoration: underline;
         }
- </style>
- '
+    </style>
 </head>
+
 <body>
-    <div class="container">
-       
-        <div class="cv-container">
-            <header>
-                <h1>CV ANDRE CERDAN RIOS</h1>
-                <p>Andre Cerdan Rios</p>
-                <p>Tiev24N</p>
-            </header>
-
-            <nav>
-                <a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a>
+    <div class="cv-container">
+        <header>
+            <h1>CV ANDRE CERDAN RIOS</h1>
+            <p>Andre Cerdan Rios</p>
+            <p>Tiev24N</p>
             
-                <a href=".\portfolio\index.html">PORTFOLIO</a>
-            
-                <a href="työkokemus.html">TYÖKOKEMUS</a>
-        
-            </nav> 
+        </header>
 
-            <p class="subtitule">Pidän ohjelmoinnista ja urheilusta.</p>
-            <main>
-                <h2>HENKILÖTIEDOT</h2>
-                    <p>Kansalaisuus: Perulainen</p>
-                    <p>Puhelin numero: 044238989</p>
-                    <p>Sähköposti: andrecr23@gmail.com</p>
+        <nav>
+            <a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a>
+            <a href=".\portfolio\index.html">PORTFOLIO</a>
+            <a href="työkokemus.html">TYÖKOKEMUS</a>
+        </nav> 
         
-                <h2>KOULUTUS</h2>
-                    <p>Lukio (Lima,Peru) 2011-2022</p>
-                    <p>Linasmäen Opisto (Turku) 2023-2024</p>
-                    <p>TAI (Turku) 2024 - </p>
-        
-                <h2>KIELET</h2>
-                    <p>Espanjaa - äidinkieli</p>
-                    <p>Suomea - Hyvä </p>
-                    <p>Englantia - Hyvä</p>
-        
-                <h2><a href="työkokemus.html" class="link"> TYÖKOKEMUS </a></h2>
-            </main>
-        </div>
-            <footer>
-                <a href="https://tai.fi/">TAI</a>
-                <a href="https://turku.inschool.fi/">WILMA</a>
-                <a href="https://edu.turku.fi/">MOODLE</a>
-            </footer>
+        <main>
+            <h2>HENKILÖTIEDOT</h2>
+            <p>Kansalaisuus: Perulainen</p>
+            <p>Puhelin numero: 044238989</p>
+            <p>Sähköposti: andrecr23@gmail.com</p>
+
+            <h2>KOULUTUS</h2>
+            <p>Lukio (Lima, Peru) 2011-2022</p>
+            <p>Linasmäen Opisto (Turku) 2023-2024</p>
+            <p>TAI (Turku) 2024 - </p>
+
+            <h2>KIELET</h2>
+            <p>Espanjaa - äidinkieli</p>
+            <p>Suomea - Hyvä</p>
+            <p>Englantia - Hyvä</p>
+
+            <h2><a href="työkokemus.html" class="link">TYÖKOKEMUS</a></h2>
+        </main>
     </div>
+    
+    <footer>
+        <a href="https://tai.fi/">TAI</a>
+        <a href="https://turku.inschool.fi/">WILMA</a>
+        <a href="https://edu.turku.fi/">MOODLE</a>
+    </footer>
 </body>
 </html>

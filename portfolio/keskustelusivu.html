@@ -3,256 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tässä on minun sivu">
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
     <link rel="stylesheet" href="../styles.css">
     
-    <title> HTML LOMAKKEET </title>
+    <title>HTML LOMAKKEET</title>
 
     <script src="keskustelusivu.js" defer></script>
     <style>
-        form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-       .navigatio {
-            margin: 20px;
-       }
-       .comentarios {
-            margin-bottom: 15px;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
+        body {
+            margin: 0;
+            background-color: rgb(255, 255, 255);
         }
-       .comentario p {
-            margin: 5px 0;
-       }
-       .formulario_campo {
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "nav"
+                "content"
+                "footer";
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #003366;
+            color: white;
+            padding: 1em 0 1em 3em;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #336699;
+            padding: 1em 0 1em 3em;
+            display: flex;
+            justify-content: center;
+            gap: 3em;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .content-wrapper {
+            grid-area: content;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        aside {
+            width: 250px; 
+            background-color: #dde6f2;
+            padding: 2em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
             display: flex;
             flex-direction: column;
+            gap: 2em;
+        }
+
+        aside a {
+            text-decoration: none;
+            color: #003366;
+            padding-left: 3em;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 30px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding-left: 3em;
+            padding-top: 5em;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #003366;
+            color: white;
+            padding: 3em 0;
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+
+        footer a { 
+            color: white;
+            text-decoration: underline;
+        }
+
+        .modal, .overlay {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        .modal {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgb(0, 0, 0);
+        }
+
+        .overlay {
+            top: 0;
+            left: 0;
             width: 100%;
-            gap: 10px;
-       }
-       .datos {
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .close {
+            display: block;
+            text-align: right;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .comentario {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9; 
+            margin-bottom: 15px; 
+        }
+
+        .datos {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
-       }
-       .comentario-texto {
+            font-weight: bold; 
+        }
+
+        .comentario-fecha,
+        .comentario-corre {
             margin: 0;
-            font-size: 16px;
+            color: #333; 
+        } 
 
-       }
-       .comentario-fecha, 
-       .comentario-corre {
-            margin: 0;
-       }
-       .contenido {
-            border: 1px solid #ccc;
-            padding: 15px;
-            border-radius: 10px;
-            background-color: #fff;
-            margin-top: 10px;
-       }
-       .cuestionario select{
-            padding: 5px;
-            font-size: 14px;
-       }
-       .cuestionario {
-            margin-top: 20px;
-
-       }
-       .consentimiento {
-           margin-top: 15px;
-       }
-       .consentimiento label {
-           font-size: 14px;
-       }
-       .consentimiento input {
-           margin-right: 5px;
-       }
-       .links {
-           background-color: #333;
-           padding: 10px;
-           text-align: center;
-       }
-       .links a {
-           color: white;
-           padding: 10px;
-           text-decoration: none;
-          
-       }
-       .navbar a:hover {
-           background-color: #555;
-       }
-       .modal {
-           display: none;
-           position: fixed;
-           left: 50%;
-           top: 50%;
-           transform: translate(-50%, -50%);
-           width: 300px;
-           background: white;
-           padding: 20px;
-           box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-           z-index: 1000;
-       }
-       .overlay {
-           display: none;
-           position: fixed;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           background: rgba(0,0,0,0.5);
-           z-index: 1000;
-       }
-       .close {
-           display: block;
-           text-align: right;
-           cursor: pointer;
-           font-size: 18px;
-
-       }
+        .consentimiento {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h2>LOMAKKE</h2>
+    <header>
+        <h1>LOMAKKE</h1>
+        <p>Andre Cerdan Rios</p>
+        <p>Tiev24N</p>
+    </header>
     <nav>
         <div class="links">
             <a href="../CV.html">CV ANDRE</a>
-    
             <a href="index.html">PORTFOLIO</a>
-     
-            <a href="../työkokemus.html">TYÖKOKEMUS</a>
-
+            
             <a href="#" onclick="openModal()">DIALOGO</a>
         </div>
-    </nav> 
-    <div class="overlay" id ="overlay" onclick="closeModal()"></div>
+    </nav>
+    
+    <div class="overlay" id="overlay" onclick="closeModal()"></div>
     
     <div class="modal" id="modal">
         <span class="close" onclick="closeModal()">x</span>
         <h3>LOMAKKE</h3>
-    <form>
-        <div class="formulario_campo">
-            <input type="email" name="email" placeholder="Sinun sähköpostisi tähän.">
-            <textarea name="comentario" placeholder="Sinun komenttisi tähän."></textarea>
-            <input type="date" name="fecha_de_nacimiento">
-        </div>
+        <form>
+            <div class="formulario_campo">
+                <input type="email" name="email" placeholder="Sinun sähköpostisi tähän.">
+                <textarea name="comentario" placeholder="Sinun kommenttisi tähän."></textarea>
+                <input type="date" name="fecha_de_nacimiento">
+            </div>
             <button type="submit">LÄHETTÄ</button>
-    </form>
+            <div class="cuestionario">
+                <label for="tipo">Valitse:</label>
+                <select id="tipo" name="tipo">
+                    <option value="Pregunta">Kysymys</option>
+                    <option value="comentario">Komentti</option>
+                </select>
+            </div>
+
+            <div class="consentimiento">
+                <label>
+                    <input type="checkbox" name="consentimiento">
+                    Hyväksyn, että he käyttävät tietojani ja henkilötietojani markkinointitarkoituksiin.
+                </label>
+            </div>
+        </form>
     </div>
 
     <script>
-        function openModal()  {
+        function openModal() {
             document.getElementById("modal").style.display = "block";
-            document.getElementById("overlay").style.display ="block";
+            document.getElementById("overlay").style.display = "block";
         }
 
-        function closeModal(){  
+        function closeModal() {  
             document.getElementById("modal").style.display = "none";
-            document.getElementById("overlay").style.display ="none";
+            document.getElementById("overlay").style.display = "none";
         }
-
-
     </script>
-    <div class="cuestionario">
-     <label for="tipo">Valitse: </label>
-     <select id="tipo" name="tipo">
-     <option value="Pregunta">Kysymys</option>
-     <option value="comentario">Komentti</option>
-     </select>
-    </div>
 
-    <div class="consentimiento">
-        <label>
-            <input type="checkbox" name="consentimiento">
-            Hyväksyn, että he käyttävät tietojani ja henkilötietojani markkinointitarkoituksiin.
-        </label>
-    </div>
- <div class="navigatio"> 
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 03.10.2025 </p>
-                <p class="comentario-corre"> mikael.korhonen@mail.com</p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">Ohjelmoinnin oppiminen on ollut yksi elämäni parhaista päätöksistä. Aluksi se oli vaikeaa, mutta nyt voin luoda omia projekteja.</p>
-            </div>
-        </section>
-    </div>
+    <div class="content-wrapper">
+        <aside>
+                <a href="keskustelusivu.html">KESKUSTELUSIVU</a>
+                <a href="../AudioProjekti.html">AUDIO_MEDIA</a>
+                <a href="flex.html">FLEX_SIVU</a>
+                <a href="../työkokemus.html">TYÖKOKEMUS</a>
+            
+        </aside>
 
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 25.12.2024</p>
-                <p class="comentario-corre"> jenni.lehtonen23@email.com</p>
+        <main>
+            <div class="comentario"> 
+                <section class="comentario">
+                    <div class="datos">
+                        <p class="comentario-fecha">03.10.2025</p>
+                        <p class="comentario-corre">mikael.korhonen@mail.com</p>
+                    </div>
+                    <div class="contenido">
+                        <p class="comentario-texto">Ohjelmoinnin oppiminen on ollut yksi elämäni parhaista päätöksistä...</p>
+                    </div>
+                </section>
             </div>
-            <div class="contenido">
-                <p class="comentario-texto">HTML ja CSS olivat helppoja oppia, mutta kun ymmärsin JavaScriptin, minusta tuntui, että voisin tehdä mitä tahansa verkossa.</p>
-            </div>
-        </section>
-    </div>
+            
 
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 17.2.2024 </p>
-                <p class="comentario-corre"> johto389@outlook.com </p>
+            <div class="comentario"> 
+                <section class="comentario">
+                    <div class="datos">
+                        <p class="comentario-fecha"> 25.12.2024</p>
+                        <p class="comentario-corre"> jenni.lehtonen23@email.com</p>
+                    </div>
+                    <div class="contenido">
+                        <p class="comentario-texto">HTML ja CSS olivat helppoja oppia, mutta kun ymmärsin JavaScriptin, minusta tuntui, että voisin tehdä mitä tahansa verkossa.</p>
+                    </div>
+                </section>
             </div>
-            <div class="contenido">
-                <p class="comentario-texto">En olisi koskaan uskonut, että pidän ohjelmoinnista niin paljon. Nyt haluan erikoistua verkkokehitykseen ja tietoturvaan.</p>
+        
+            <div class="comentario"> 
+                <section class="comentario">
+                    <div class="datos">
+                        <p class="comentario-fecha"> 17.2.2024 </p>
+                        <p class="comentario-corre"> johto389@outlook.com </p>
+                    </div>
+                    <div class="contenido">
+                        <p class="comentario-texto">En olisi koskaan uskonut, että pidän ohjelmoinnista niin paljon. Nyt haluan erikoistua verkkokehitykseen ja tietoturvaan.</p>
+                    </div>
+                </section>
             </div>
-        </section>
+        
+            <div class="comentario"> 
+                <section class="comentario">
+                    <div class="datos">
+                        <p class="comentario-fecha"> 18.07.2023 </p>
+                        <p class="comentario-corre"> antti.heinonen2021@gmail.com </p>
+                    </div>
+                    <div class="contenido">
+                        <p class="comentario-texto">En ymmärrä algoritmeista mitään, se saa minut tuntemaan, että ohjelmointi ei ole minua varten.</p>
+                    </div>
+                </section>
+            </div>
+        
+            <div class="comentario"> 
+                <section class="comentario">
+                    <div class="datos">
+                        <p class="comentario-fecha"> 05.11.2023 </p>
+                        <p class="comentario-corre"> riikka.salminen00@gwebmail.com </p>
+                    </div>
+                    <div class="contenido">
+                        <p class="comentario-texto">Pidän ongelmien ratkaisemisesta koodilla. Se on kuin jättikokoisen palapelin kokoamista ja jokainen koodirivi on pala.</p>
+                    </div>
+                </section>
+            </div>
+        
+            <div class="comentario"> 
+                <section class="comentario">
+                    <div class="datos">
+                        <p class="comentario-fecha"> 02.12.2022 </p>
+                        <p class="comentario-corre"> sari.ahonen@mail.com </p>
+                    </div>
+                    <div class="contenido">
+                        <p class="comentario-texto">Olen turhautunut. Vietän tuntikausia yrittääkseni korjata virhettä, ja lopulta se puuttui puolipisteestä.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
     </div>
-
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 18.07.2023 </p>
-                <p class="comentario-corre"> antti.heinonen2021@gmail.com </p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">En ymmärrä algoritmeista mitään, se saa minut tuntemaan, että ohjelmointi ei ole minua varten.</p>
-            </div>
-        </section>
-    </div>
-
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 05.11.2023 </p>
-                <p class="comentario-corre"> riikka.salminen00@gwebmail.com </p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">Pidän ongelmien ratkaisemisesta koodilla. Se on kuin jättikokoisen palapelin kokoamista ja jokainen koodirivi on pala.</p>
-            </div>
-        </section>
-    </div>
-
-    <div class="comentario"> 
-        <section class="comentario">
-            <div class="datos">
-                <p class="comentario-fecha"> 02.12.2022 </p>
-                <p class="comentario-corre"> sari.ahonen@mail.com </p>
-            </div>
-            <div class="contenido">
-                <p class="comentario-texto">Olen turhautunut. Vietän tuntikausia yrittääkseni korjata virhettä, ja lopulta se puuttui puolipisteestä.</p>
-            </div>
-        </section>
-    </div>
- </div>
+    
+    <footer>
+        <a href="https://tai.fi/">TAI</a>
+        <a href="https://turku.inschool.fi/">WILMA</a>
+        <a href="https://edu.turku.fi/">MOODLE</a>
+    </footer>
 </div>
 </body>
 </html>

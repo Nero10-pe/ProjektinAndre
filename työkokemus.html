@@ -23,6 +23,10 @@
     </script>
 
 <style>
+    
+    body {
+        margin: 0;
+    }
     .container {
         height: 1000px;
         display: grid;
@@ -33,6 +37,11 @@
         "footer";
         grid-template-rows: auto auto 1fr auto;
         min-height: 100vh;
+    }
+
+    h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
     }
 
     header {
@@ -46,10 +55,10 @@
     nav {
         grid-area: nav;
         background-color: #336699;
-        padding: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        text-align: center;
+        padding: 1em 0 1em 3em;
+        display: flex;
+        justify-content: center;
+        gap: 3em;
     }
 
     nav a {
@@ -58,18 +67,24 @@
     }
 
     main {
-        grid-area: main;
-        padding: 40px; 
+        flex-grow: 1;
+        padding: 30px;
         background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding-left: 3em;
+        padding-top: 5em;
     }
 
     footer {
         grid-area: footer;
         background-color: #003366;
         color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 20px; 
+        justify-content: center;
+        padding: 3em 0;
+        gap: 2em;
+        display: flex;
+        flex-direction: row;
     }
 
     footer a { 
@@ -88,11 +103,9 @@
         </header>
 
         <nav>
-            <ul>
                 <a href="CV.html">CV ANDRE</a>
                 <a href=".\portfolio\index.html">PORTFOLIO</a>
                 <a href=".\portfolio\keskustelusivu.html">KESKUSTELUSIVU</a>
-            </ul>
         </nav> 
 
         <main>
