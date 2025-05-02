@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tässä on minun sivu">
+    <meta name="keywords" content="koira, pöytä, kengät">
+    <meta name="author" content="Andre Cerdan Rios">
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Muuttujia ja tietotyyppejä</title>
+
+    <script src="Muuttujia.js" defer></script>
+
+
+    <style>
+        .container {
+            height: 1000px;
+            display: grid;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "section"
+            "footer";
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+        }
+    
+        header {
+            grid-area: header;
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        nav {
+            grid-area: nav;
+            background-color: #336699;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+    
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px; 
+        }
+    
+        section {
+            grid-area: section; 
+            padding: 40px; 
+            background-color: #f2f2f2;
+        }
+    
+        footer {
+            grid-area: footer;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px; 
+        }
+    
+        footer a { 
+            color: white;
+            text-decoration: underline;
+            margin: 0 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Muuttujia ja tietotyyppejä</h1>
+            <p>Andre Cerdan Rios</p>
+            <p>Tiev24N</p>
+        </header>
+
+        <nav>
+            <ul>
+                <a href="../CV.html">CV ANDRE</a>
+                <a href="index.html">PORTFOLIO</a>
+                <a href="../työkokemus.html">KESKUSTELUSIVU</a>
+                <a href="keskustelusivu.html">KESKUSTELUSIVU</a>
+            </ul>
+        </nav> 
+
+       
+        <section>
+                <button onclick="summa()">Summa</button>
+                <button onclick="vahennys()">Vähennys</button>
+                <button onclick="kerto()">Kerto</button>
+                <button onclick="jako()">Jako</button>
+        </section>
+        
+
+        <footer>
+            <a href="https://tai.fi/">TAI</a>
+            <a href="https://turku.inschool.fi/">WILMA</a>
+            <a href="https://edu.turku.fi/">MOODLE</a>
+        </footer>
+
+    </div>
+</body>
+</html>

@@ -22,61 +22,61 @@
         }
     </script>
 
-    <style>
-        .cotainer {
-            height: 1000px;
-            display: grid;
-            grid-template-areas: 
-            "header"
-            "nav"
-            "main"
-            "footer";
-            grid-template-rows: auto auto 1fr auto;
-            min-height: 100vh;
-            
-        }
+<style>
+    .container {
+        height: 1000px;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+        grid-template-rows: auto auto 1fr auto;
+        min-height: 100vh;
+    }
 
-        header {
-            grid-area: header;
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    header {
+        grid-area: header;
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
 
-        nav {
-            grid-area: nav;
-            background-color: #336699;
-            padding: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
+    nav {
+        grid-area: nav;
+        background-color: #336699;
+        padding: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+    }
 
-        main {
-            grid-area: main;
-            padding: 20px;
-            background-color: #f2f2f2;
-        }
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
 
-        footer {
-            grid-area: footer;
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
+    main {
+        grid-area: main;
+        padding: 40px; 
+        background-color: #f2f2f2;
+    }
 
-        footer a { 
-            color: white;
-            text-decoration: underline;
-        }
-    </style>
+    footer {
+        grid-area: footer;
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px; 
+    }
+
+    footer a { 
+        color: white;
+        text-decoration: underline;
+    }
+</style>
 </head>
 <body>
     <div class="container">
