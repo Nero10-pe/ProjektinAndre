@@ -7,8 +7,8 @@
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
     <link rel="stylesheet" href="styles.css">
-
     <title>Portfoliosivu</title>
+    <script src="index.js" defer></script>
     <style>
         body {
             margin: 0;
@@ -116,9 +116,18 @@
             color: white;
             text-decoration: underline;
         }
+
+        button {
+            background-color: green;
+        }
+
+        button:hover {
+            background-color: rgb(8, 255, 8);
+        }
     </style>
 </head>
 <body>
+    <button onclick="hello()">Moi</button>
 <div class="container">
     <header>
         <h1>Andre Portfolio</h1>
