@@ -2,7 +2,7 @@
 <html lang="fi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale: 1.0">
     <meta name="description" content="Tässä on minun sivu">
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
@@ -176,17 +176,17 @@
     <div class="modal" id="modal">
         <span class="close" onclick="closeModal()">x</span>
         <h3>LOMAKKE</h3>
-        <form>
+        <form id="myForm">
             <div class="formulario_campo">
-                <input type="email" name="email" placeholder="Sinun sähköpostisi tähän.">
-                <textarea name="comentario" placeholder="Sinun kommenttisi tähän."></textarea>
-                <input type="date" name="fecha_de_nacimiento">
+                <input type="email" id="emailField" name="email" placeholder="Sinun sähköpostisi tähän.">
+                <textarea id="bodyField" name="comentario" placeholder="Sinun kommenttisi tähän."></textarea>
+                <input type="date" id="birthdayField" name="fecha_de_nacimiento">
             </div>
-            <button type="submit">LÄHETTÄ</button>
+            <button type="submit" onclick="send(event)">LÄHETTÄ</button>
 
             <div class="cuestionario">
                 <label for="tipo">Valitse:</label>
-                <select id="tipo" name="tipo">
+                <select id="typeField" name="tipo">
                     <option value="Pregunta">Kysymys</option>
                     <option value="comentario">Komentti</option>
                 </select>
@@ -194,7 +194,7 @@
 
             <div class="consentimiento">
                 <label>
-                    <input type="checkbox" name="consentimiento">
+                    <input type="checkbox" id="usageField" name="consentimiento">
                     Hyväksyn, että he käyttävät tietojani ja henkilötietojani markkinointitarkoituksiin.
                 </label>
             </div>
