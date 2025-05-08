@@ -1,3 +1,4 @@
+console.log("henkilötiedot avattu")
 
 let henkilot = [
     {
@@ -13,7 +14,6 @@ let henkilot = [
         driversLicense: true
     },
 ];
-
 
 henkilot.push(
     {
@@ -46,10 +46,8 @@ function luoRivit() {
     for (let i = 0; i < henkilot.length; i++) {
         const henkilö = henkilot[i];
 
-     
         const rivi = document.createElement("tr");
 
-       
         let tdName = document.createElement("td");
         tdName.innerHTML = henkilö.name;
         rivi.appendChild(tdName);
@@ -63,9 +61,8 @@ function luoRivit() {
         rivi.appendChild(tdJob);
 
         let tdDriversLicense = document.createElement("td");
-        tdDriversLicense.innerHTML = henkilö.driversLicense ? "Kyllä" : "Ei"; // Muestra "Kyllä" o "Ei"
+        tdDriversLicense.innerHTML = henkilö.driversLicense ? "Kyllä" : "Ei"; 
         rivi.appendChild(tdDriversLicense);
-
 
         rivit.appendChild(rivi);
     }
