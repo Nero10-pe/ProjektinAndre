@@ -36,7 +36,7 @@
             text-align: center;
            
         }
-
+        
         nav {
             grid-area: nav;
             background-color: #336699;
@@ -51,7 +51,9 @@
             color: white;
             text-decoration: none;
         }
-        
+        nav a:hover {
+            color: rgba(255, 255, 255, 0.527);
+        }
         .content-wrapper {
             grid-area: content;
             display: flex;
@@ -103,7 +105,7 @@
             text-decoration: underline;
         }
 
-
+       
 </style>
 </head>
 <body>
@@ -126,8 +128,8 @@
         </aside>
         <main>
             <h2>Lisää tehtävä</h2>
-            <input type="text" id="texto">
-            <input type="number" id="cantidad">
+            <input type="text" id="texto" placeholder="Lisää uusi tehtävä.">
+            <input type="number" id="cantidad" placeholder="Kuinka monta kertaa." min = "1"> 
             <button id="addButton">Lisää</button>
             <h3>Tehtävällistä</h3>
             <ul id="taskList"></ul>
