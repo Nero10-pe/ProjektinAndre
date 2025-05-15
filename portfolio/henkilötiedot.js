@@ -73,21 +73,26 @@ luoRivit();
 function lähetä() {
 
 const nimi = document.getElementById("nimi").value.trim();
-const ikä = parseInt(document.getElementById("ikä").value);
+const ikaStr = document.getElementById("ikä").value.trim;
 const työ = document.getElementById("työ").value.trim().toLowerCase;  
 const ajokortti = document.getElementById("ajokortti").checked;
 
-if (isNaN(ikä) || ikä < 0 ) {
+if (ikaStr === "" || isNaN(ikaStr)) {
+    alert ("Ikä on pakollinen ja pitää ollaa numeroa")
+    return;
+}
+const ikä = Number(ikaStr)
+if (ikä < 0 ) {
     alert("Ikä ei voi olla negatiivinen.");
     return;
 }
 
 let ikaemoji = ikä >= 18 ? "🍺" : "";
 
-let työemoji = tyä.includes ("Opiskelija") ? "🎓" : "";
+let työemoji = työ.includes ("Opiskelija") || työ.includes ("opiskelija") ? "🎓" : "";
 
 const taulu = document.getElementById("tulostaulu");
-const rivi = taulu.insertiRow(-1);
+const rivi = taulu.insertRow(-1);
 
 rivi.insertCell(0).textContent = nimi;
 rivi.insertCell(1).textContent = ikä;
