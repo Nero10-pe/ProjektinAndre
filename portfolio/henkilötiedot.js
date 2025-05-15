@@ -69,3 +69,29 @@ function luoRivit() {
 }
 
 luoRivit();
+
+function lähetä() {
+
+const nimi = document.getElementById("nimi").value.trim();
+const ikä = parseInt(document.getElementById("ikä").value);
+const työ = document.getElementById("työ").value.trim().toLowerCase;  
+const ajokortti = document.getElementById("ajokortti").checked;
+
+if (isNaN(ikä) || ikä < 0 ) {
+    alert("Ikä ei voi olla negatiivinen.");
+    return;
+}
+
+let ikaemoji = ikä >= 18 ? "🍺" : "";
+
+let työemoji = tyä.includes ("Opiskelija") ? "🎓" : "";
+
+const taulu = document.getElementById("tulostaulu");
+const rivi = taulu.insertiRow(-1);
+
+rivi.insertCell(0).textContent = nimi;
+rivi.insertCell(1).textContent = ikä;
+rivi.insertCell(2).textContent = ikaemoji;
+rivi.insertCell(3).textContent = työ + "" + työemoji;
+rivi.insertCell(4).textContent = ajokortti ? "true" : "false";
+}

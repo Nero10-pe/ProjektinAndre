@@ -122,6 +122,15 @@
         nav a:hover {
            color: rgba(255, 255, 255, 0.527);
         }
+
+        .Formulario {
+            padding: 2em 0 0 0;
+        }
+
+        #Ajokortti {
+            margin-top: 15px;
+            margin-bottom: 15px ;
+        }
 </style>
 </head>
 
@@ -159,6 +168,25 @@
                 <tbody id="rivit">
                 </tbody>
             </table>
+            <div class="Formulario">
+                <h2>LOMAKE</h2>
+                <input type="text" id="Nimi" placeholder="Sun nimi.">
+                <input type="number" id="Ikä" placeholder="Sun ikä.">
+                <input type="text" id="Työ" placeholder="Sun  työ."><br>
+                <label>
+                    Ajokortti
+                    <input type="checkbox" id="Ajokortti">
+                </label><br>
+                <button onclick="lähetä()">Lähettä</button>
+                <table id="tulostable">
+                    <tr>
+                        <th>Nimi</th>
+                        <th>Ikä</th>
+                        <th>Työ</th>
+                        <th>Ajokortti</th>
+                    </tr>
+                </table>
+            </div>
         </main>
 
     </div>
