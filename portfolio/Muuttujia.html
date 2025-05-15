@@ -20,7 +20,7 @@
             grid-template-areas: 
             "header"
             "nav"
-            "section"
+            "content"
             "footer";
             grid-template-rows: auto auto 1fr auto;
             min-height: 100vh;
@@ -30,52 +30,86 @@
             grid-area: header;
             background-color: #003366;
             color: white;
-            padding: 20px;
+            padding: 1em 0 1em 3em;
             text-align: center;
         }
     
         nav {
             grid-area: nav;
             background-color: #336699;
-            padding: 10px;
-            text-decoration: none;
-            text-align: center;
+            padding: 1em 0 1em 3em;
+            gap: 3em;
+            display: flex;
+            justify-content: center;
         }
     
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px; 
         }
-    
-        section {
-            grid-area: section; 
-            padding: 40px; 
+        
+        .content-wrapper {
+            grid-area: content;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 30px;
             background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding-left: 3em;
+            padding-top: 5em;
+        }
+
+        aside {
+            width: 250px; 
+            background-color: #dde6f2;
+            padding: 2em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        aside a {
+            text-decoration: none;
+            color: #003366;
+            padding-left: 3em;
         }
     
         footer {
             grid-area: footer;
             background-color: #003366;
             color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px; 
+            justify-content: center;
+            padding: 3em 0;
+            gap: 2em;
+            display: flex;
+            flex-direction: row;
         }
     
         footer a { 
             color: white;
             text-decoration: underline;
-            margin: 0 10px; 
+            
         }
 
         nav a:hover {
             color: rgba(255, 255, 255, 0.527);
         }
+
+        .boton {
+            padding: 2em 2em 0 0;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
 
         <header>
             <h1>Muuttujia ja tietotyyppejä</h1>
@@ -90,34 +124,42 @@
                 <a href="keskustelusivu.html">KESKUSTELUSIVU</a>
             
         </nav> 
+        <div class="content-wrapper">
+            <aside>
+                <a href="../AudioProjekti.html">AUDIO_MEDIA</a>
+                <a href="flex.html">FLEX_SIVU</a>
+                <a href="Muuttujia.html">MUUTTUJIA</a>
+            </aside>
 
-       
-        <section>
-             
-            <h2>Kysessä on muuttujia ja tietotyyppejä sivu</h2>
-            <button onclick="summa(a, b)">Summa</button>
-            <button onclick="vahennys(b,c)">Vähennys</button>
-            <button onclick="kerto(c,d)">Kerto</button>
-            <button onclick="jako(d,a)">Jako</button>
+            <main>
+                <h2>Laskin</h2>
+                <input type="number" id="numero1" placeholder="Ekä numero">
+                <input type="number" id="numero2" placeholder="Toinen numero ">
+                <div>
+                    <button onclick="laskin_summa()">+</button>
+                    <button onclick="laskin_vahennys()">-</button>
+                    <button onclick="laskin_kerto()">×</button>
+                    <button onclick="laskin_jako()">÷</button>
+               </div>
 
-            <h2>Laskin</h2>
-            <input type="number" id="numero1" placeholder="Ekä numero">
-            <input type="number" id="numero2" placeholder="Toinen numero ">
-            <div>
-                <button onclick="laskin_summa()">+</button>
-                <button onclick="laskin_vahennys()">-</button>
-                <button onclick="laskin_kerto()">×</button>
-                <button onclick="laskin_jako()">÷</button>
-            </div>
-            
-        </section>
+               <h2>Kysessä on muuttujia ja tietotyyppejä sivu</h2>
+               <button onclick="summa(a, b)">Summa</button>
+               <button onclick="vahennys(b,c)">Vähennys</button>
+               <button onclick="kerto(c,d)">Kerto</button>
+               <button onclick="jako(d,a)">Jako</button>
 
+               <div class="boton">
+                   <button onclick="PäiväJaAika()">PäiväJaAika</button>
+                   <p id="tulos"></p>
+               </div>
+            </main>
+        </div>
+        
         <footer>
             <a href="https://tai.fi/">TAI</a>
             <a href="https://turku.inschool.fi/">WILMA</a>
             <a href="https://edu.turku.fi/">MOODLE</a>
         </footer>
-
-    </div>
+</div>
 </body>
 </html>

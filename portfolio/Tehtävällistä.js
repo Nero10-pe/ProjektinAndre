@@ -36,3 +36,6 @@ function lisaa() {
 const addButton = document.getElementById("addButton");
 addButton.onclick = lisaa;
 paivitaLista();
+
+
+

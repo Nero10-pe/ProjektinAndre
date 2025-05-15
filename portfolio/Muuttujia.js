@@ -48,3 +48,23 @@ function laskin_jako() {
         alert("Nolla ei voi olla jakajana.");
     }
 }
+
+function PäiväJaAika() {
+    var nykyhetki = new Date();
+
+    var viikonpäivät = [
+        "sunnuntai", "maanantai", "tiistai", "keskivikko", "torstai", "perjantai", "lauantai"
+    ];
+
+    var paiva = viikonpäivät[nykyhetki.getDay()];
+    var pvm = nykyhetki.toLocaleDateString("fi-FI", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+    });
+
+    var aika = nykyhetki.toLocaleTimeString("fI-FI");
+    var viesti = "Täänän on " + paiva + ", " + pvm + ", ja kello on " + aika;
+    document.getElementById("tulos").innerText = viesti;   
+
+}
