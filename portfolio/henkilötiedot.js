@@ -70,33 +70,33 @@ function luoRivit() {
 
 luoRivit();
 
+document.getElementById("submitButton").addEventListener("click", lähetä);
+
 function lähetä() {
+    const nimi = document.getElementById("nimi").value.trim();
+    const ikaStr = document.getElementById("ika").value.trim();
+    const tyo = document.getElementById("tyo").value.trim().toLowerCase();  
+    const ajokortti = document.getElementById("ajokortti").checked;
 
-const nimi = document.getElementById("nimi").value.trim();
-const ikaStr = document.getElementById("ikä").value.trim;
-const työ = document.getElementById("työ").value.trim().toLowerCase;  
-const ajokortti = document.getElementById("ajokortti").checked;
+    if (ikaStr === "" || isNaN(ikaStr)) {
+        alert("Ikä on pakollinen ja pitää ollaa numeroa");
+        return;
+    }
 
-if (ikaStr === "" || isNaN(ikaStr)) {
-    alert ("Ikä on pakollinen ja pitää ollaa numeroa")
-    return;
-}
-const ikä = Number(ikaStr)
-if (ikä < 0 ) {
-    alert("Ikä ei voi olla negatiivinen.");
-    return;
-}
+    const ikä = Number(ikaStr);
+    if (ikä < 0) {
+        alert("Ikä ei voi olla negatiivinen.");
+        return;
+    }
 
-let ikaemoji = ikä >= 18 ? "🍺" : "";
+    let ikaemoji = ikä >= 18 ? "🍺" : "";
+    let tyoemoji = tyo.includes('opiskelija') ? "🎓" : "";
 
-let työemoji = työ.includes ("Opiskelija") || työ.includes ("opiskelija") ? "🎓" : "";
+    const taulu = document.getElementById("tulostaulu");
+    const rivi = taulu.insertRow(-1);
 
-const taulu = document.getElementById("tulostaulu");
-const rivi = taulu.insertRow(-1);
-
-rivi.insertCell(0).textContent = nimi;
-rivi.insertCell(1).textContent = ikä;
-rivi.insertCell(2).textContent = ikaemoji;
-rivi.insertCell(3).textContent = työ + "" + työemoji;
-rivi.insertCell(4).textContent = ajokortti ? "true" : "false";
+    rivi.insertCell(0).textContent = nimi;
+    rivi.insertCell(1).textContent = ikä + " " + ikaemoji;;
+    rivi.insertCell(2).textContent = tyo + " " + tyoemoji; 
+    rivi.insertCell(3).textContent = ajokortti ? "true" : "false";
 }

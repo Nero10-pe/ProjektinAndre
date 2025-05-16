@@ -127,7 +127,7 @@
             padding: 2em 0 0 0;
         }
 
-        #Ajokortti {
+        #ajokortti {
             margin-top: 15px;
             margin-bottom: 15px ;
         }
@@ -135,7 +135,7 @@
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
     <header>
         <h1>Henkilötiedot</h1>
         <p>Andre Cerdan Rios</p>
@@ -169,16 +169,16 @@
                 </tbody>
             </table>
             <div class="Formulario">
-                <h2>LOMAKE</h2>
-                <input type="text" id="Nimi" placeholder="Sun nimi.">
-                <input type="number" id="Ikä" placeholder="Sun ikä.">
-                <input type="text" id="Työ" placeholder="Sun  työ."><br>
+                <h2>Lomake</h2>
+                <input type="text" id="nimi" placeholder="Sun nimi.">
+                <input type="number" id="ika" placeholder="Sun ikä.">
+                <input type="text" id="tyo" placeholder="Sun työ."><br>
                 <label>
                     Ajokortti
-                    <input type="checkbox" id="Ajokortti">
+                    <input type="checkbox" id="ajokortti">
                 </label><br>
-                <button onclick="lähetä()">Lähettä</button>
-                <table id="tulostaulo">
+                <button id="submitButton">Lähettä</button>
+                <table id="tulostaulu">
                     <tr>
                         <th>Nimi</th>
                         <th>Ikä</th>
@@ -195,7 +195,6 @@
         <a href="https://turku.inschool.fi/">WILMA</a>
         <a href="https://edu.turku.fi/">MOODLE</a>
     </footer>
-</div>
-    
+  </div>
 </body>
 </html>

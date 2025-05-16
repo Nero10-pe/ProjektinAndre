@@ -1,74 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tässä on minun sivu">
+    <meta name="keywords" content="koira, pöytä, kengät">
+    <meta name="author" content="Andre Cerdan Rios">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="henkilötiedot.js" defer></script>
+    <title>Henkilötiedot</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .container {
+            height: 1000px;
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "nav"
+                "content"
+                "footer";
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+        }
+        
+        header {
+            grid-area: header;
+            background-color: #003366;
+            color: white;
+            padding: 1em 0 1em 3em;
+            text-align: center;
+        }
 
-let henkilot = [
-    {
-        name: "Merja Meikäläinen",
-        age: 20,
-        job: "Opiskelija",
-        driversLicense: true
-    },
-    {
-        name: "Teppo Teikäläinen",
-        age: 25,
-        job: "Sähköteknikko",
-        driversLicense: true
-    },
-];
+        nav {
+            grid-area: nav;
+            background-color: #336699;
+            padding: 1em 0 1em 3em;
+            gap: 3em;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .content-wrapper {
+            grid-area: content;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
 
+        aside {
+            width: 250px; 
+            background-color: #dde6f2;
+            padding: 2em 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
 
-henkilot.push(
-    {
-        name: "Helena Heikäläinen",
-        age: 30,
-        job: "Ohjelmistosuunnittelija",
-        driversLicense: false
-    },
-    {
-        name: "Semir Sikäläinen",
-        age: 18,
-        job: "Opiskelija",
-        driversLicense: true
-    },
-    {
-        name: "Tomas Täkäläinen",
-        age: 22,
-        job: "Linja-autonkuljettaja",
-        driversLicense: true
+        aside a {
+            text-decoration: none;
+            color: #003366;
+            padding-left: 3em;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 30px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding-left: 3em;
+            padding-top: 5em;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #003366;
+            color: white;
+            justify-content: center;
+            padding: 3em 0;
+            gap: 2em;
+            display: flex;
+            flex-direction: row;
+        }
+
+        footer a { 
+            color: white;
+            text-decoration: underline;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        nav a:hover {
+            color: rgba(255, 255, 255, 0.527);
+        }
+
+        .Formulario {
+            padding: 2em 0 0 0;
+        }
+
+        #Ajokortti {
+            margin-top: 15px;
+            margin-bottom: 15px ;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+        <h1>Henkilötiedot</h1>
+        <p>Andre Cerdan Rios</p>
+        <p>Tiev24N</p>
+    </header>
+    <nav>
+        <a href="index.html">PORTFOLIO</a>
+        <a href="../CV.html">CV ANDRE</a>
+        <a href="../työkokemus.html">TYÖKOKEMUS</a>
+        <a href="keskustelusivu.html">KESKUSTELUSIVU</a>
+    </nav>
+    <div class="content-wrapper">
+        <aside>
+            <a href="Tehtävällistä.html">TEHTÄVÄLLISTÄ</a>
+            <a href="../AudioProjekti.html">AUDIO_MEDIA</a>
+            <a href="flex.html">FLEX_SIVU</a>
+            <a href="Muuttujia.html">MUUTTUJIA</a>
+        </aside>
+        <main>
+            <h2>Henkilötiedot</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nimi</th>
+                        <th>Ikä</th>
+                        <th>Työ</th>
+                        <th>Ajokortti</th>
+                    </tr>
+                </thead>
+                <tbody id="rivit">
+                </tbody>
+            </table>
+            <div class="Formulario">
+                <h2>LOMAKE</h2>
+                <input type="text" id="nimi" placeholder="Sun nimi.">
+                <input type="number" id="ika" placeholder="Sun ikä.">
+                <input type="text" id="tyo" placeholder="Sun työ."><br>
+                <label>
+                    Ajokortti
+                    <input type="checkbox" id="ajokortti">
+                </label><br>
+                <button onclick='lähetä()'>Lähettä</button>
+                <table id="tulostaulu">
+                    <tr>
+                        <th>Nimi</th>
+                        <th>Ikä</th>
+                        <th>Työ</th>
+                        <th>Ajokortti</th>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <a href="https://tai.fi/">TAI</a>
+        <a href="https://turku.inschool.fi/">WILMA</a>
+        <a href="https://edu.turku.fi/">MOODLE</a>
+    </footer>
+  </div>
+  <script>
+    function lähetä() {
+        const nimi = document.getElementById("nimi").value.trim();
+        const ikaStr = document.getElementById("ika").value.trim();
+        const tyo = document.getElementById("tyo").value.trim().toLowerCase();  
+        const ajokortti = document.getElementById("ajokortti").checked;
+
+        if (ikaStr === "" || isNaN(ikaStr)) {
+            alert("Ikä on pakollinen ja pitää ollaa numeroa");
+            return;
+        }
+        const ikä = Number(ikaStr);
+        if (ikä < 0) {
+            alert("Ikä ei voi olla negatiivinen.");
+            return;
+        }
+
+        let ikaemoji = ika >= 18 ? "🍺" : "";
+        let tyoemoji = tyo.includes('opiskelija') ? "🎓" : "";
+
+        const taulu = document.getElementById("tulostaulu");
+        const rivi = taulu.insertRow(-1);
+
+        rivi.insertCell(0).textContent = nimi;
+        rivi.insertCell(1).textContent = ikä;
+        rivi.insertCell(2).textContent = tyo + " " + tyoemoji; 
+        rivi.insertCell(3).textContent = ajokortti ? "true" : "false";
     }
-);
-
-
-const rivit = document.getElementById("rivit");
-
-function luoRivit() {
-    
-    rivit.innerHTML = "";
-
-    for (let i = 0; i < henkilot.length; i++) {
-        const henkilö = henkilot[i];
-
-     
-        const rivi = document.createElement("tr");
-
-       
-        let tdName = document.createElement("td");
-        tdName.innerHTML = henkilö.name;
-        rivi.appendChild(tdName);
-
-        let tdAge = document.createElement("td");
-        tdAge.innerHTML = henkilö.age;
-        rivi.appendChild(tdAge);
-
-        let tdJob = document.createElement("td");
-        tdJob.innerHTML = henkilö.job;
-        rivi.appendChild(tdJob);
-
-        let tdDriversLicense = document.createElement("td");
-        tdDriversLicense.innerHTML = henkilö.driversLicense ? "Kyllä" : "Ei"; // Muestra "Kyllä" o "Ei"
-        rivi.appendChild(tdDriversLicense);
-
-
-        rivit.appendChild(rivi);
-    }
-}
-
-luoRivit();
+  </script>
+</body>
+</html>
