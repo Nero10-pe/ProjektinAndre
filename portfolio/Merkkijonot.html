@@ -8,9 +8,9 @@
     <meta name="author" content="Andre Cerdan Rios">
     <link rel="stylesheet" href="../styles.css">
 
-    <script src="Kasino.js" defer></script>
+    <script src="Merkkijonot.js" defer></script>
 
-    <title>Kasino</title>
+    <title>Merkkijonometodit</title>
 <style>
 body {
             margin: 0;
@@ -103,13 +103,16 @@ body {
             text-decoration: underline;
         }
         
+        input[type="number"] {
+            width: 100px;
+        }
 </style>
 </head>
 
 <body>
 <div class="container">
     <header>
-        <h1>Kasino</h1>
+        <h1>Merkkijono</h1>
         <p>Andre Cerdan Rios</p>
         <p>Tiev24N</p>
     </header>
@@ -125,38 +128,40 @@ body {
             <a href="flex.html">FLEX_SIVU</a>
             <a href="Muuttujia.html">MUUTTUJIA</a>
             <a href="henkilötiedot.html">HENKILÖTIEDOT</a>
+            <a href="Kasino.html">KASINO</a>
+            <a href="Merkkijonot.html">MERKKIJONOT</a>
         </aside>
         <main>
             <h3>Poimi kirjain</h3>
-            <input type="text" id="palabra1">
-            <input type="number" id="numero1">
-            <button onclick="Näytä()">Näytä</button>
+            <input type="text" id="palabra1" placeholder="Syötä joku sana">
+            <input type="number" id="numero1" placeholder="Syötä joku numero">
+            <button onclick="Poimi()">Näytä</button>
             <div id="tulos"></div>
 
             <h3>Löydä indeksi</h3>
-            <input type="text" id="palabra2">
-            <input type="text" id="palabra3">
-            <button onclick="Näytä()">Näytä</button>
+            <input type="text" id="palabra2" placeholder="Syötä joku sana">
+            <input type="text" id="palabra3" placeholder="Syötä joku kirjain">
+            <button onclick="Indeksi()">Näytä</button>
             <div id="tulos2"></div>
 
             <h3>Leikkaa merkkijono</h3>
-            <input type="text" id="palabra4">
-            <input type="number" id="numero2">
-            <input type="number" id="numero3">
-            <button onclick="Näytä()">Näytä</button>
+            <input type="text" id="palabra4" placeholder="Syötä joku sana">
+            <input type="number" id="numero2" placeholder="Eka numero">
+            <input type="number" id="numero3"placeholder="Toka numero">
+            <button onclick="Merkkijono()">Näytä</button>
             <div id="tulos3"></div>
 
             <h3>Etsi ja korvaa</h3>
-            <input type="text" id="palabra5">
-            <input type="text" id="palabra6">
-            <input type="text" id="palabra7">
-            <button onclick="Näytä()">Näytä</button>
+            <input type="text" id="palabra5" placeholder="Syötä joku sana">
+            <input type="text" id="palabra6" placeholder="Vaihda kirjain">
+            <input type="text" id="palabra7" placeholder="Uusi kirjain">
+            <button onclick="Etsi()">Näytä</button>
             <div id="tulos4"></div>
 
             <h3>Poikki ja pinoon</h3>
-            <input type="text" id="palabra8">
-            <input type="text" id="palabra9">
-            <button onclick="Näytä()">Näytä</button>
+            <input type="text" id="palabra8" placeholder="Syötä joku sana">
+            <input type="text" id="palabra9" placeholder="Poistettava kirjain">
+            <button onclick="Poikki()">Näytä</button>
             <ul id="tulos5"></ul>
 
         </main>
