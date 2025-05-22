@@ -1,6 +1,8 @@
+console.log("Kasino avattu");
 
+// Random Tehtävä
 function Noppa() {
-    const tulos = Math.floor(Math.random() * 6) + 1; // Número entre 1-6
+    const tulos = Math.floor(Math.random() * 6) + 1; 
     document.getElementById("noppa").textContent = "Tuloksesi on: " + tulos;
 }
 
@@ -8,9 +10,10 @@ function Noppa() {
 function Lotto() {
     let arvotut = new Set();
     while (arvotut.size < 7) {
-        const numero = Math.floor(Math.random() * 40) + 1; // Numero 1-40
+        const numero = Math.floor(Math.random() * 40) + 1; 
         arvotut.add(numero);
     }
-    const numerot = [...arvotut].sort((a, b) => a - b);
+    const numerot = [...arvotut]
     document.getElementById("lotto").textContent = "Arvotut numerot: " + numerot.join(", ");
 }
+
